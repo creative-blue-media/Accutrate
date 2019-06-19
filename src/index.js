@@ -12,7 +12,7 @@ import "./main";
 */
 
 /* if you want single color remove this section:multicolor */
-var color = 'light.orange'
+var color = 'dark.blue'
 
 if (localStorage.getItem('themeColor')) {
   color = localStorage.getItem('themeColor')
