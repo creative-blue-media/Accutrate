@@ -38,6 +38,8 @@
   </b-row>
 </template>
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   data () {
     return {
@@ -48,6 +50,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['register']),
     formSubmit () {
       var user = {
         firstname: this.firstname,
@@ -55,11 +58,8 @@ export default {
         email: this.email,
         password: this.password
       }
-      console.log('register', user)
-      this.axios.post('http://localhost:3000/api/users', user)
-        .then((response) => {
-          console.log('THIS IS DATA FROM API: ', response)
-        })
+      // console.log('register', user)
+      this.register(user)
       this.$router.push('/')
     }
   }

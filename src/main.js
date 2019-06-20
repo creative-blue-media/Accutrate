@@ -29,10 +29,6 @@ import VueScrollTo from 'vue-scrollto'
 import firebase from 'firebase/app'
 import 'firebase/auth'
 
-import axios from 'axios'
-import VueAxios from 'vue-axios'
-
-Vue.use(VueAxios, axios)
 Vue.use(BootstrapVue)
 Vue.use(VueI18n)
 

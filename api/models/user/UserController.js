@@ -18,16 +18,18 @@ module.exports = function(app, express) {
     const user = new User({
       email: body.email,
       password: body.password,
-      username: body.email
+      username: body.email,
+      firstname: body.firstname, 
+      lastname: body.lastname
     });
 
-    // user.save()
-    // .then(user => user.generateAuthToken())
-    // .then(token => res.status(200).send({token: token, user: user}))
-    // .catch(err => {
-    //   res.status(400).send({error: err, message: err.message})
+    user.save()
+    .then(user => user.generateAuthToken())
+    .then(token => res.status(200).send({token: token, user: user}))
+    .catch(err => {
+      res.status(400).send({error: err, message: err.message})
 
-    // })
+    })
   })
 
   userApi.get("/user", authenticate, function(req, res) {
@@ -149,9 +151,9 @@ module.exports = function(app, express) {
 
   // user log in
   userApi.post("/login", (req, res) => {
-    console.log("end point login??")
+    console.log("end point login??", req.body)
     var body = _.pick(req.body, ['email', 'password']);
-    console.log("In login");
+    console.log("In login", body);
 
     User.findByCredentials(body.email, body.password).then((user) => {
       return user.generateAuthToken().then((token) => {

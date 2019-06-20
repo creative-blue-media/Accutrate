@@ -1,6 +1,12 @@
 import firebase from 'firebase/app'
 import 'firebase/auth'
+import Vue from 'vue'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 import { currentUser } from '@/constants/config'
+
+Vue.use(VueAxios, axios)
 
 export default {
   state: {
@@ -38,24 +44,40 @@ export default {
     }
   },
   actions: {
-
+    register ({ commit }, payload) {
+      commit('clearError')
+      console.log('Going to register', payload)
+      Vue.axios.post('http://localhost:3000/api/users', payload)
+        .then((response) => {
+          console.log('THIS IS DATA FROM API: ', response)
+        })
+    },
     login ({ commit }, payload) {
       commit('clearError')
       commit('setProcessing', true)
-      firebase
-        .auth()
-        .signInWithEmailAndPassword(payload.email, payload.password)
-        .then(
-          user => {
-            const item = { uid: user.user.uid, ...currentUser }
-            localStorage.setItem('user', JSON.stringify(item))
-            commit('setUser', { uid: user.user.uid, ...currentUser })
-          },
-          err => {
-            localStorage.removeItem('user')
-            commit('setError', err.message)
-          }
-        )
+      Vue.axios.post('http://localhost:3000/api/users/login', payload)
+        .then((response) => {
+          console.log('THIS IS THE DATA inside: ', response)
+          const item = { uid: response.data.user._id, token: response.data.token, ...currentUser }
+          localStorage.setItem('user', JSON.stringify(item))
+          console.log('storage: ', JSON.parse(localStorage.getItem('user')))
+          currentUser.title = response.data.user.firstname + ' ' + response.data.user.lastname
+          commit('setUser', { uid: item.uid, ...currentUser })
+        })
+      // firebase
+      //   .auth()
+      //   .signInWithEmailAndPassword(payload.email, payload.password)
+      //   .then(
+      //     user => {
+      //       const item = { uid: user.user.uid, ...currentUser }
+      //       localStorage.setItem('user', JSON.stringify(item))
+      //       commit('setUser', { uid: user.user.uid, ...currentUser })
+      //     },
+      //     err => {
+      //       localStorage.removeItem('user')
+      //       commit('setError', err.message)
+      //     }
+      //   )
     },
     signOut ({ commit }) {
       firebase
