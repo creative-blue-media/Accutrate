@@ -22,6 +22,13 @@ module.exports = {
     watchOptions: {
       poll: false,
       ignored: /node_modules/
+    },
+    proxy: {
+      '^/api': {
+        target: 'http://localhost:8080/',
+        changeOrigin: true,
+        ws: true
+      }
     }
   },
   chainWebpack: config => {

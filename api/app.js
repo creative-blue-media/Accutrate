@@ -25,13 +25,14 @@ app.use(bodyParser.urlencoded({limit: '50mb', extended:true}));
 if (process.env.NODE_ENV === 'production') {
   console.log("Using client/build")
   app.use(express.static(path.join(__dirname, '../client/build')));
-} else {
-  app.use(express.static(path.join(__dirname, '../client/public')));
-}
-
-app.get('*', (req, res) => {
+  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 });
+} else {
+  app.use(express.static(path.join(__dirname, '../src')));
+}
+
+
 
 /**
  *

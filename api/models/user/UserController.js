@@ -11,9 +11,11 @@ module.exports = function(app, express) {
 
   // Create new user
   userApi.post("/", (req, res) => {
-    res.status(400).json({
+    console.log("I MADE IT IN;")
+    res.status(200).json({
       success: true, 
-      message: "U HIT THE END POINT"
+      message: "U HIT THE END POINT",
+      data: "here is data"
     });
     // const body = _.pick(req.body, ['email', 'username', 'password', 'firstname', 'lastname', 'address', 'frequency', 'strain', 'preference']);
     // console.log("Creating user")

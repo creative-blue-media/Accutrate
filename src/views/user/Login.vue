@@ -51,9 +51,9 @@ export default {
         .then((response) => {
           console.log('THIS IS THE DATA: ', response.data)
         })
-      this.axios.get('localhost:8080/api/users')
+      this.axios.post('http://localhost:3000/api/users')
         .then((response) => {
-          console.log('THIS IS DATA FROM API: ', response.data)
+          console.log('THIS IS DATA FROM API: ', response)
         })
       this.email = 'demo@gogo.com'
       this.password = 'gogo123'
