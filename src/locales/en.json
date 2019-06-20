@@ -10,6 +10,8 @@
     "password": "Password",
     "forgot-password-question": "Forget password?",
     "fullname": "Full Name",
+    "firstname": "First Name",
+    "lastname": "Last Name",
     "login-button": "LOGIN",
     "register-button": "REGISTER",
     "reset-password-button": "RESET",

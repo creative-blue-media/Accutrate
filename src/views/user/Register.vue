@@ -5,7 +5,7 @@
           <div class="position-relative image-side ">
             <p class=" text-white h2">{{ $t('dashboards.magic-is-in-the-details') }}</p>
               <p class="white mb-0">  Please use this form to register. <br />If you are a member, please
-                <router-link tag="a" to="/user/login" class="white">login</router-link>.
+                <router-link tag="a" to="/user/login" class="white"><b>login</b></router-link>.
               </p>
           </div>
           <div class="form-side">
@@ -13,8 +13,12 @@
             <h6 class="mb-4">{{ $t('user.register')}}</h6>
             <b-form @submit.prevent="formSubmit">
                <label class="form-group has-float-label mb-4">
-                <input type="text" class="form-control" v-model="fullname">
-                <span>{{ $t('user.fullname') }}</span>
+                <input type="text" class="form-control" v-model="firstname">
+                <span>{{ $t('user.firstname') }}</span>
+              </label>
+              <label class="form-group has-float-label mb-4">
+                <input type="text" class="form-control" v-model="lastname">
+                <span>{{ $t('user.lastname') }}</span>
               </label>
               <label class="form-group has-float-label mb-4">
                 <input type="email" class="form-control" v-model="email">
@@ -37,14 +41,25 @@
 export default {
   data () {
     return {
-      fullname: '',
+      firstname: '',
+      lastname: '',
       email: '',
       password: ''
     }
   },
   methods: {
     formSubmit () {
-      console.log('register')
+      var user = {
+        firstname: this.firstname,
+        lastname: this.lastname,
+        email: this.email,
+        password: this.password
+      }
+      console.log('register', user)
+      this.axios.post('http://localhost:3000/api/users', user)
+        .then((response) => {
+          console.log('THIS IS DATA FROM API: ', response)
+        })
       this.$router.push('/')
     }
   }

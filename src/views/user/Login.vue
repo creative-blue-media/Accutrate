@@ -5,7 +5,7 @@
           <div class="position-relative image-side ">
             <p class=" text-white h2">{{ $t('dashboards.magic-is-in-the-details') }}</p>
               <p class="white mb-0">Please use your credentials to login.<br>If you are not a member, please
-                <router-link tag="a" to="/user/register" class="white">register</router-link>.
+                <router-link tag="a" to="/user/register" class="white"><b>register</b></router-link>.
               </p>
           </div>
           <div class="form-side">
@@ -50,10 +50,6 @@ export default {
       this.axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
         .then((response) => {
           console.log('THIS IS THE DATA: ', response.data)
-        })
-      this.axios.post('http://localhost:3000/api/users')
-        .then((response) => {
-          console.log('THIS IS DATA FROM API: ', response)
         })
       this.email = 'demo@gogo.com'
       this.password = 'gogo123'
