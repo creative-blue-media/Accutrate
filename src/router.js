@@ -77,6 +77,13 @@ const routes = [
     ]
   },
   { path: '/error', component: () => import(/* webpackChunkName: "error" */ './views/Error') },
+  { path: '/website',
+    component: () => import(/* webpackChunkName: "website" */ './views/website'),
+    redirect: 'website/home',
+    children: [
+      { path: 'home', component: () => import(/* webpackChunkName: "website" */ './views/website/Home') }
+    ]
+  },
   {
     path: '/user',
     component: () => import(/* webpackChunkName: "user" */ './views/user'),

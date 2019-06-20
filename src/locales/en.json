@@ -534,5 +534,9 @@
     "vue-tables": "Vue Tables",
     "vue-pagination": "Pagination",
     "vue-scrollable": "Scrollable"
+  },
+  "website": {
+    "home": "HOME",
+    "login": "LOGIN"
   }
 }
