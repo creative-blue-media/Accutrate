@@ -24,7 +24,7 @@ var UserSchema = new mongoose.Schema({
     minlength: 8
   },
   bio: String, 
-  image: {type: String, default: "future.jpg"},
+  image: {type: String, default: "acculogo.png"},
   username: {
     type: String, 
     required: true,

@@ -33,7 +33,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 
-
 export default {
   data () {
     return {
@@ -47,6 +46,15 @@ export default {
   methods: {
     ...mapActions(['login']),
     formSubmit () {
+      console.log('WHER DOES THIS GO?')
+      this.axios.get('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then((response) => {
+          console.log('THIS IS THE DATA: ', response.data)
+        })
+      this.axios.get('localhost:8080/api/users')
+        .then((response) => {
+          console.log('THIS IS DATA FROM API: ', response.data)
+        })
       this.email = 'demo@gogo.com'
       this.password = 'gogo123'
       this.login({ email: this.email, password: this.password })

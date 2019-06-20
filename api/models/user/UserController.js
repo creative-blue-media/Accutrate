@@ -11,22 +11,26 @@ module.exports = function(app, express) {
 
   // Create new user
   userApi.post("/", (req, res) => {
-    const body = _.pick(req.body, ['email', 'username', 'password', 'firstname', 'lastname', 'address', 'frequency', 'strain', 'preference']);
-    console.log("Creating user")
-    // temporary fix for required fields in User model
-    const user = new User({
-      email: body.email,
-      password: body.password,
-      username: body.email
+    res.status(400).json({
+      success: true, 
+      message: "U HIT THE END POINT"
     });
+    // const body = _.pick(req.body, ['email', 'username', 'password', 'firstname', 'lastname', 'address', 'frequency', 'strain', 'preference']);
+    // console.log("Creating user")
+    // // temporary fix for required fields in User model
+    // const user = new User({
+    //   email: body.email,
+    //   password: body.password,
+    //   username: body.email
+    // });
 
-    user.save()
-    .then(user => user.generateAuthToken())
-    .then(token => res.status(200).send({token: token, user: user}))
-    .catch(err => {
-      res.status(400).send({error: err, message: err.message})
+    // user.save()
+    // .then(user => user.generateAuthToken())
+    // .then(token => res.status(200).send({token: token, user: user}))
+    // .catch(err => {
+    //   res.status(400).send({error: err, message: err.message})
 
-    })
+    // })
   })
 
   userApi.get("/user", authenticate, function(req, res) {

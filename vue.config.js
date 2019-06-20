@@ -17,6 +17,7 @@ module.exports = {
     open: true,
     overlay: { warnings: false, errors: true },
     publicPath: '/',
+    port: 3000,
     quiet: true,
     watchOptions: {
       poll: false,

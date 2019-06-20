@@ -4,10 +4,10 @@
 const express = require("express");
 const http = require("http");
 const bodyParser = require("body-parser");
-const mongoose = require("../config/mongoose.js").mongoose;
+const mongoose = require("./config/mongoose.js").mongoose;
 const _ = require("lodash");
 const path = require("path");
-const morgan = require("morgan");
+//const morgan = require("morgan");
 // const methodOverride = require('method-override');
 
 // create express app instance
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'production') {
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
-  });
+});
 
 /**
  *
