@@ -6,8 +6,8 @@ mongoose.Promise = global.Promise;
 console.log("Using Development Server")
 
 
-//mongoose.connect("mongodb://chronic:Chronic1@ds235850.mlab.com:35850/chronic-society", {useNewUrlParser: true});
-mongoose.connect("mongodb://localhost:27017/chronic_society", {useNewUrlParser: true});
+mongoose.connect("mongodb://chronic:Chronic1@ds235850.mlab.com:35850/chronic-society", {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost:27017/chronic_society", {useNewUrlParser: true});
 // if (s == 'development') {
  
 //   console.log("In: ", s);

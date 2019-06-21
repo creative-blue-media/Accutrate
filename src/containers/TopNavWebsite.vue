@@ -12,6 +12,31 @@
             </div>
             <div class="header-icons d-inline-block align-middle">
                 <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.publications')}}</a>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-middle">
+                <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.resources')}}</a>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-middle">
+                <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.shop')}}</a>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-middle">
+                <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.contact')}}</a>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-middle">
+                <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.learnmore')}}</a>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-middle">
+                <div class="position-relative d-none d-none d-lg-inline-block">
                 <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
                 </div>
             </div>

@@ -537,6 +537,11 @@
   },
   "website": {
     "home": "HOME",
-    "login": "LOGIN"
+    "login": "LOGIN",
+    "publications": "PUBLICATIONS",
+    "resources": "RESOURCES",
+    "shop": "SHOP",
+    "contact": "CONTACT",
+    "learnmore": "LEARN MORE"
   }
 }
