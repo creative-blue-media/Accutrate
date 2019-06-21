@@ -1,13 +1,7 @@
 <template>
   <b-row class="h-100">
-    <b-colxx xxs="12" md=10  class="mx-auto my-auto">
+    <b-colxx xxs="6" md=6  class="mx-auto my-auto">
       <b-card class="auth-card" no-body>
-          <!-- <div class="position-relative image-side ">
-            <p class=" text-white h2">{{ $t('dashboards.magic-is-in-the-details') }}</p>
-              <p class="white mb-0">Please use your credentials to login.<br>If you are not a member, please
-                <router-link tag="a" to="/user/register" class="white"><b>register</b></router-link>.
-              </p>
-          </div> -->
           <div class="form-side">
             <router-link tag="a" to="/"><span class="logo-single"/></router-link>
             <h6 class="mb-4">{{ $t('user.login-title')}}</h6>
@@ -20,6 +14,9 @@
                 <input type="password" class="form-control" v-model="password">
                 <span>{{ $t('user.password') }}</span>
               </label>
+              <div class="d-flex justify-content-between align-items-center">
+                <router-link tag="a" to="/user/register" class="black"><b>Need to Register?</b></router-link>
+              </div>
               <div class="d-flex justify-content-between align-items-center">
                   <router-link tag="a" to="/user/forgot-password">{{ $t('user.forgot-password-question')}}</router-link>
                   <b-button type="submit" variant="primary" size="lg" class="btn-shadow" :disabled="processing">{{ $t('user.login-button')}}</b-button>
