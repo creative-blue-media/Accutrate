@@ -3,7 +3,6 @@
     <b-colxx xxs="6" md=6  class="mx-auto my-auto">
       <b-card class="auth-card">
           <div class="form-side">
-            <router-link tag="a" to="/"><span class="logo-single"/></router-link>
             <h6 class="mb-4">{{ $t('user.forgot-password')}}</h6>
             <b-form @submit.prevent="formSubmit">
               <label class="form-group has-float-label mb-4">
