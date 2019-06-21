@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar fixed-top">
-        <router-link class="navbar-logo" tag="a" to="/app">
+        <router-link class="navbar-logo" tag="a" to="#">
             <span class="logo d-none d-xs-block"></span>
             <span class="logo-mobile d-block d-xs-none"></span>
         </router-link>
