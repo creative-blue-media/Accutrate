@@ -5,39 +5,39 @@
             <span class="logo-mobile d-block d-xs-none"></span>
         </router-link>
         <div class="ml-auto">
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="homeUrl">{{$t('website.home')}}</a>
+                <a class="btn primary btn-sm mb-2 mr-1" target="_top" :href="homeUrl">{{$t('website.home')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.publications')}}</a>
+                <a class="btn btn-sm mb-2 mr-1" target="_top" :href="publicationsUrl">{{$t('website.publications')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.resources')}}</a>
+                <a class="btn btn-sm mb-2 mr-1" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.shop')}}</a>
+                <a class="btn btn-sm mb-2 mr-1" target="_top" :href="shopUrl">{{$t('website.shop')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.contact')}}</a>
+                <a class="btn btn-sm mb-2 mr-1" target="_top" :href="contactUrl">{{$t('website.contact')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.learnmore')}}</a>
+                <a class="btn btn-sm mb-2 mr-1" target="_top" :href="learnmoreUrl">{{$t('website.learnmore')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-middle">
+            <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
+                <a class="btn btn-sm mb-2 mr-1" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
                 </div>
             </div>
         </div>
@@ -48,7 +48,7 @@ import { mapGetters, mapMutations, mapActions } from 'vuex'
 // import { MenuIcon, MobileMenuIcon } from '@/components/Svg'
 
 import notifications from '@/data/notifications'
-import { searchPath, menuHiddenBreakpoint, localeOptions, buyUrl, homeUrl, loginUrl } from '@/constants/config'
+import { searchPath, menuHiddenBreakpoint, localeOptions, buyUrl, homeUrl, publicationsUrl, resourcesUrl, shopUrl, contactUrl, learnmoreUrl, loginUrl } from '@/constants/config'
 
 export default {
   components: {
@@ -67,6 +67,11 @@ export default {
       localeOptions,
       buyUrl,
       homeUrl,
+      publicationsUrl,
+      resourcesUrl,
+      shopUrl,
+      contactUrl,
+      learnmoreUrl,
       loginUrl,
       notifications
     }

@@ -1,7 +1,7 @@
 <template>
   <b-row class="h-100">
     <b-colxx xxs="12" md=10  class="mx-auto my-auto">
-      <Strong>SHOP</strong>
+      <Strong>LEARNMORE</strong>
     </b-colxx>
   </b-row>
 </template>

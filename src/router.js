@@ -81,7 +81,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "website" */ './views/website'),
     redirect: 'website/home',
     children: [
-      { path: 'home', component: () => import(/* webpackChunkName: "website" */ './views/website/Home') }
+      { path: 'home', component: () => import(/* webpackChunkName: "website" */ './views/website/Home') },
+      { path: 'publications', component: () => import(/* webpackChunkName: "website" */ './views/website/Publications') },
+      { path: 'resources', component: () => import(/* webpackChunkName: "website" */ './views/website/Resources') },
+      { path: 'shop', component: () => import(/* webpackChunkName: "website" */ './views/website/Shop') },
+      { path: 'contact', component: () => import(/* webpackChunkName: "website" */ './views/website/Contact') },
+      { path: 'learnmore', component: () => import(/* webpackChunkName: "website" */ './views/website/LearnMore') }
     ]
   },
   {
