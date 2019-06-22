@@ -1,7 +1,7 @@
 
 <template>
      <div class="sidebar" @mouseenter="isMenuOver=true" @mouseleave="isMenuOver=false"  @touchstart="isMenuOver=true" >
-        <div class="main-menu">
+        <!-- <div class="main-menu">
             <vue-perfect-scrollbar class="scroll" :settings="{ suppressScrollX: true, wheelPropagation: false }" >
                 <ul class="list-unstyled">
 
@@ -11,7 +11,7 @@
                    <li :class="{ active : selectedParentMenu==='ui'}"><a @click.prevent="openSubMenu($event,'ui')" href="#ui"><i class="iconsminds-pantone"></i>{{ $t("menu.ui") }}</a></li>
                    <li :class="{ active : selectedParentMenu==='menu'}"><a @click.prevent="openSubMenu($event,'menu')" href="#menu"><i class="iconsminds-three-arrow-fork"></i>{{ $t("menu.menu") }}</a></li>
 
-                   <!-- Single Menu
+                   Single Menu
                     <router-link :class="{ active : selectedParentMenu==='dashboards' }" @click.native="changeSelectedParentHasNoSubmenu('dashboards')" to="/app/dashboards/default" tag="li">
                       <a><i class="iconsminds-digital-drawing"></i>  {{ $t("menu.dashboards") }}</a>
                     </router-link>
@@ -21,10 +21,10 @@
                     <router-link :class="{ active : selectedParentMenu==='applications' }" @click.native="changeSelectedParentHasNoSubmenu('applications')" to="/app/applications/todo" tag="li">
                       <a><i class="iconsminds-digital-drawing"></i>  {{ $t("menu.applications") }}</a>
                     </router-link>
-                     -->
+                    
                 </ul>
             </vue-perfect-scrollbar>
-        </div>
+        </div> -->
 
         <div class="sub-menu">
              <vue-perfect-scrollbar class="scroll" :settings="{ suppressScrollX: true, wheelPropagation: false }" >

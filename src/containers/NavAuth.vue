@@ -90,7 +90,6 @@
                 </b-dropdown-item>
             </b-dropdown>
           </div>
-        </div>
     </nav>
 </template>
 <script>
