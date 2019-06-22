@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
+    "api": "node api/app.js",
     "build": "vue-cli-service build --prod",
     "lint": "vue-cli-service lint"
   },
