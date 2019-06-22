@@ -92,6 +92,16 @@ const routes = [
     ]
   },
   {
+    path: '/features',
+    component: () => import(/* webpackChunkName: "features" */ './views/features/Features'),
+    redirect: 'features/Features', 
+    children: [
+      {
+        path: 'features', component: () => import(/* webpackChunkName: "features" */ './views/features/Features')
+      }
+    ] 
+  },
+  {
     path: '/user',
     component: () => import(/* webpackChunkName: "user" */ './views/user'),
     redirect: '/user/login',

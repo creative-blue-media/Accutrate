@@ -2108,7 +2108,7 @@ button {
     background: $foreground-color;
     z-index: 2;
     position: fixed;
-    left: $main-menu-width;
+    //left: $main-menu-width; // leave this here just incase 
     border-left: 1px solid $separator-color-light;
     @include depth(2);
     transition: transform $menu-collapse-time;
