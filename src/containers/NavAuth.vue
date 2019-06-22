@@ -1,18 +1,18 @@
 <template>
     <nav class="navbar fixed-top">
-        <a href="#" class="menu-button d-none d-md-block" @click.prevent="changeSideMenuStatus({step :menuClickCount+1,classNames:menuType})">
+        <a href="#" class="menu-button burger d-none d-md-block" @click.prevent="changeSideMenuStatus({step :menuClickCount+1,classNames:menuType})">
             <menu-icon/>
         </a>
         <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none" @click.prevent="changeSideMenuForMobile(menuType)">
             <mobile-menu-icon/>
         </a>
         <div  class="d-inline-block">
-            <b-dropdown id="langddm" class="ml-2" variant="light" size="sm" toggle-class="language-button">
+            <!-- <b-dropdown id="langddm" class="ml-2" variant="light" size="sm" toggle-class="language-button">
                 <template slot="button-content">
                         <span  class="name">{{$i18n.locale.toUpperCase()}}</span>
                 </template>
                 <b-dropdown-item v-for="(l,index) in localeOptions" :key="index" @click="changeLocale(l.id)">{{l.name}}</b-dropdown-item>
-            </b-dropdown>
+            </b-dropdown> -->
         </div>
         <router-link class="navbar-logo" tag="a" to="/app">
             <span class="logo d-none d-xs-block"></span>
@@ -20,10 +20,6 @@
         </router-link>
 
           <div class="ml-auto">
-          <div class="header-icons d-inline-block align-middle">
-            <div class="position-relative d-none d-none d-lg-inline-block">
-              <a class="btn btn-outline-primary btn-sm mb-2 mr-3" target="_top" :href="buyUrl">{{$t('user.buy')}}</a>
-            </div>
             <div  class="position-relative d-none d-sm-inline-block">
                 <b-dropdown variant="empty" size="sm" right toggle-class="header-icon" menu-class="position-absolute mt-3 iconMenuDropdown" no-caret>
                     <template slot="button-content">
