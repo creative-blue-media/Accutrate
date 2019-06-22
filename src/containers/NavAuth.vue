@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar fixed-top">
-        <a href="#" class="menu-button d-none d-md-block" @click.prevent="changeSideMenuStatus({step :menuClickCount+1,classNames:menuType})">
+        <a href="#" class="menu-button" @click.prevent="changeSideMenuStatus({step :menuClickCount+1,classNames:menuType})">
             <menu-icon/>
         </a>
         <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none" @click.prevent="changeSideMenuForMobile(menuType)">
