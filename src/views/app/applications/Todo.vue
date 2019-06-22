@@ -48,7 +48,7 @@
               </b-modal>
 
           </div>
-          <piaf-breadcrumb/>
+          <cbm-breadcrumb/>
         </div>
         <div class="mb-2">
           <b-button variant="empty" class="pt-0 pl-0 d-inline-block d-md-none" v-b-toggle.displayOptions>

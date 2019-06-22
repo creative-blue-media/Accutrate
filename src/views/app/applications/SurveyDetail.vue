@@ -17,7 +17,7 @@
               </b-dropdown>
             </b-button-group>
           </div>
-          <piaf-breadcrumb/>
+          <cbm-breadcrumb/>
           <b-tabs nav-class="separator-tabs ml-0 mb-5" content-class="tab-content" v-model="tabIndex" :no-fade="true"  v-if="isLoadSurveys" key="itemList">
             <b-tab :title="$t('survey.details')" >
               <b-row>

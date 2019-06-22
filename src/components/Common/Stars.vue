@@ -1,7 +1,7 @@
 <template>
-  <div class="piaf-rater" key="1">
+  <div class="cbm-rater" key="1">
     <div
-      class="piaf-rater-star "
+      class="cbm-rater-star "
       v-for="(r,index) in ratings"
       :key="index"
       @click="set(r)"

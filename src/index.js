@@ -7,7 +7,7 @@ import './assets/css/vendor/bootstrap.min.css'
 - Remove multicolor section in current file
 - Uncomment the two lines below
 
-import "./assets/css/sass/themes/piaf.light.orange.scss";
+import "./assets/css/sass/themes/cbm.light.orange.scss";
 import "./main";
 */
 
@@ -18,7 +18,7 @@ if (localStorage.getItem('themeColor')) {
   color = localStorage.getItem('themeColor')
 }
 let render = () => {
-    import('./assets/css/sass/themes/piaf.' + color + '.scss').then(x => require('./main'))
+    import('./assets/css/sass/themes/cbm.' + color + '.scss').then(x => require('./main'))
 }
 
 render()

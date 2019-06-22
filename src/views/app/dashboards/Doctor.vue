@@ -3,7 +3,7 @@
   <div>
     <b-row>
       <b-colxx xxs="12">
-        <piaf-breadcrumb :heading="$t('menu.default')"/>
+        <cbm-breadcrumb :heading="$t('menu.default')"/>
         <div class="separator mb-5"></div>
       </b-colxx>
     </b-row>
@@ -167,7 +167,7 @@
 
       <b-colxx md="6" lg="4" class="mb-4">
         <gradient-card>
-          <b-badge pill variant="theme-3" class="align-self-start mb-3">{{ $t('dashboards.piaf') }}</b-badge>
+          <b-badge pill variant="theme-3" class="align-self-start mb-3">{{ $t('dashboards.cbm') }}</b-badge>
           <p class="lead text-white">{{ $t('dashboards.magic-is-in-the-details') }}</p>
           <p class="text-white">{{ $t('dashboards.yes-it-is-indeed') }}</p>
         </gradient-card>
