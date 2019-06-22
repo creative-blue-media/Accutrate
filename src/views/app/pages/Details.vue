@@ -9,7 +9,7 @@
             <b-dropdown-item>{{ $t('dashboards.this-month') }}</b-dropdown-item>
           </b-dropdown>
       </div>
-      <piaf-breadcrumb/>
+      <cbm-breadcrumb/>
       <b-tabs nav-class="separator-tabs ml-0 mb-5" content-class="tab-content" :no-fade="true">
         <b-tab :title="$t('pages.details')" >
           <b-row>

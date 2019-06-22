@@ -73,7 +73,7 @@
             </template>
           </b-modal>
         </div>
-        <piaf-breadcrumb/>
+        <cbm-breadcrumb/>
         <div class="mb-2 mt-2">
           <b-button
             variant="empty"

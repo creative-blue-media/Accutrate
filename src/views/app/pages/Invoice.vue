@@ -2,7 +2,7 @@
 <div>
   <b-row>
     <b-colxx xxs="12">
-      <piaf-breadcrumb :heading="$t('menu.invoice')"/>
+      <cbm-breadcrumb :heading="$t('menu.invoice')"/>
       <div class="separator mb-5"></div>
     </b-colxx>
   </b-row>
@@ -26,7 +26,7 @@
             <div class="d-flex flex-column">
             <div class="d-flex flex-row justify-content-between pt-2 pb-2">
                 <div class="d-flex align-self-center">
-                    <img src="https://coloredstrategies.com/mailing/piaf.png" />
+                    <img src="https://coloredstrategies.com/mailing/cbm.png" />
                 </div>
                 <div class="d-flex w-30 text-right align-self-center">
                     <p class="text-small text-semi-muted mb-0">ColoredStrategies Inc 35 Little Russell St. Bloomsburg London,UK<br />784 451 12 47</p>
@@ -137,7 +137,7 @@
               <tbody>
                   <tr>
                       <td align="left" valign="center" style="padding-bottom:35px; padding-top:15px; border-top:0;width:100% !important;">
-                          <img src="https://coloredstrategies.com/mailing/piaf.png" />
+                          <img src="https://coloredstrategies.com/mailing/cbm.png" />
                       </td>
                       <td align="right" valign="center" style="padding-bottom:20px;border-top:0;width:100% !important;">
                           <p style="color: #8f8f8f; font-weight: normal; line-height: 1.2; font-size: 12px; white-space: nowrap; ">
