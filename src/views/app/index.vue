@@ -1,6 +1,6 @@
 <template>
   <div id="app-container" :class="getMenuType">
-    <top-nav/>
+    <nav-auth/>
     <sidebar/>
     <main>
       <div class="container-fluid">
@@ -11,7 +11,7 @@
 </template>
 <script>
 import Sidebar from '@/containers/Sidebar'
-import TopNav from '@/containers/TopNav'
+import NavAuth from '@/containers/NavAuth'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -19,7 +19,7 @@ export default {
     return { show: false }
   },
   components: {
-    TopNav,
+    NavAuth,
     Sidebar
   },
   computed: {
