@@ -6,7 +6,7 @@ verbose config file /home/vagrant/.npmrc
 verbose config file /usr/etc/npmrc
 verbose config file /usr/share/npm/npmrc
 verbose caching /usr/local/accutrate/package.json
-verbose loadDefaults piaf-vue@3.0.4
+verbose loadDefaults cbm-vue@3.0.4
 verbose readDependencies: using package.json deps
 verbose where, deps [ '/usr/local/accutrate',
 verbose where, deps   [ 'axios',
@@ -55,7 +55,7 @@ verbose where, deps     'sass-loader',
 verbose where, deps     'vue-loader',
 verbose where, deps     'vue-template-compiler' ] ]
 verbose from cache /usr/local/accutrate/package.json
-info preinstall piaf-vue@3.0.4
+info preinstall cbm-vue@3.0.4
 verbose caching /usr/local/accutrate/node_modules/wbuf/package.json
 verbose loadDefaults wbuf@1.7.3
 verbose caching /usr/local/accutrate/node_modules/webpack-log/package.json
