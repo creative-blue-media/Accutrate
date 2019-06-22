@@ -14,12 +14,14 @@ const routes = [
       {
         path: 'app/dashboards',
         component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards'),
-        redirect: '/app/dashboards/default',
+        redirect: '/app/dashboards/patient',
         children: [
           { path: 'default', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Default') },
           { path: 'analytics', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Analytics') },
           { path: 'ecommerce', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Ecommerce') },
-          { path: 'content', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Content') }
+          { path: 'content', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Content') },
+          { path: 'doctor', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Doctor') },
+          { path: 'patient', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Patient') }
         ]
       },
       {
