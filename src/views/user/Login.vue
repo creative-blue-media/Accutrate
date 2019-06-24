@@ -44,7 +44,6 @@ export default {
   methods: {
     ...mapActions(['login']),
     formSubmit () {
-      console.log('WHER DOES THIS GO?')
       // this.email = 'demo@gogo.com'
       // this.password = 'gogo123'
       this.login({ email: this.email, password: this.password })
