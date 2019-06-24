@@ -50,6 +50,14 @@ const routes = [
         ]
       },
       {
+        path: 'app/settings',
+        component: () => import(/* webpackChunkName: "setting" */ './views/app/settings'),
+        redirect: '/app/settings/settings',
+        children: [
+          { path: 'settings', component: () => import(/* webpackChunkName: "setting" */ './views/app/settings/Settings') }
+        ]
+      },
+      {
         path: 'app/ui',
         component: () => import(/* webpackChunkName: "ui" */ './views/app/ui'),
         redirect: '/app/ui/alerts',
