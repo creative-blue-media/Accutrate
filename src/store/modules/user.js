@@ -58,11 +58,11 @@ export default {
       Vue.axios.post('http://localhost:3000/api/users/login', payload)
         .then((response) => {
           console.log('THIS IS THE DATA inside: ', response)
-          const item = { uid: response.data.user._id, token: response.data.token, ...currentUser }
+          const item = { uid: response.data.user._id, token: response.data.token, ...response.data.user }
           localStorage.setItem('user', JSON.stringify(item))
           console.log('storage: ', JSON.parse(localStorage.getItem('user')))
           currentUser.title = response.data.user.firstname + ' ' + response.data.user.lastname
-          commit('setUser', { uid: item.uid, ...currentUser })
+          commit('setUser', { uid: item.uid, ...response.data.user })
         }, (err) => {
           console.log('THere is erer', err.response)
           commit('setError', err.response.data.message)
