@@ -166,10 +166,16 @@ module.exports = function(app, express) {
         });
       });
     }).catch((e) => {
-      console.log(e);
+      var mes;
+      if(e != null){
+        mes = "User Not Found";
+      }
+      else{
+        mes = "Invalid Password"
+      }
       res.status(400).send({
         success: false,
-        message: "Login Unsuccessful",
+        message: mes,
         error: e
       });
     });
