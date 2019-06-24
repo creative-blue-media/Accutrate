@@ -64,8 +64,8 @@ export default {
           currentUser.title = response.data.user.firstname + ' ' + response.data.user.lastname
           commit('setUser', { uid: item.uid, ...currentUser })
         }, (err) => {
-          console.log("THere is erer", err.response);
-          commit('setError', err.response.data.message);
+          console.log('THere is erer', err.response)
+          commit('setError', err.response.data.message)
         })
       // firebase
       //   .auth()

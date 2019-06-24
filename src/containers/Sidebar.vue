@@ -4,13 +4,11 @@
         <!-- <div class="main-menu">
             <vue-perfect-scrollbar class="scroll" :settings="{ suppressScrollX: true, wheelPropagation: false }" >
                 <ul class="list-unstyled">
-
                     <li :class="{ active : selectedParentMenu==='dashboards' }"><a @click.prevent="openSubMenu($event,'dashboards')" href="#dashboards"><i class="iconsminds-shop-4"></i>{{ $t("menu.dashboards") }}</a></li>
                    <li :class="{ active : selectedParentMenu==='pages'}"><a @click.prevent="openSubMenu($event,'pages')" href="#pages"><i class="iconsminds-digital-drawing"></i>{{ $t("menu.pages") }}</a></li>
                    <li :class="{ active : selectedParentMenu==='applications'}"><a @click.prevent="openSubMenu($event,'applications')" href="#applications"><i class="iconsminds-air-balloon-1"></i>{{ $t("menu.applications") }}</a></li>
                    <li :class="{ active : selectedParentMenu==='ui'}"><a @click.prevent="openSubMenu($event,'ui')" href="#ui"><i class="iconsminds-pantone"></i>{{ $t("menu.ui") }}</a></li>
                    <li :class="{ active : selectedParentMenu==='menu'}"><a @click.prevent="openSubMenu($event,'menu')" href="#menu"><i class="iconsminds-three-arrow-fork"></i>{{ $t("menu.menu") }}</a></li>
-
                    Single Menu
                     <router-link :class="{ active : selectedParentMenu==='dashboards' }" @click.native="changeSelectedParentHasNoSubmenu('dashboards')" to="/app/dashboards/default" tag="li">
                       <a><i class="iconsminds-digital-drawing"></i>  {{ $t("menu.dashboards") }}</a>
@@ -21,7 +19,6 @@
                     <router-link :class="{ active : selectedParentMenu==='applications' }" @click.native="changeSelectedParentHasNoSubmenu('applications')" to="/app/applications/todo" tag="li">
                       <a><i class="iconsminds-digital-drawing"></i>  {{ $t("menu.applications") }}</a>
                     </router-link>
-                    
                 </ul>
             </vue-perfect-scrollbar>
         </div> -->

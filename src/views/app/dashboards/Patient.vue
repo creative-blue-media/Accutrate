@@ -240,32 +240,32 @@ import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 import {
-  CalendarView,
-  CalendarViewHeader,
+  // CalendarView,
+  // CalendarViewHeader,
   CalendarMathMixin
 } from 'vue-simple-calendar'
 
-import Vuetable from 'vuetable-2/src/components/Vuetable'
-import VuetablePaginationBootstrap from '@/components/Common/VuetablePaginationBootstrap'
+// import Vuetable from 'vuetable-2/src/components/Vuetable'
+// import VuetablePaginationBootstrap from '@/components/Common/VuetablePaginationBootstrap'
 
 import draggable from 'vuedraggable'
 
 import vSelect from 'vue-select'
 import 'vue-select/dist/vue-select.css'
 
-import IconCard from '@/components/Cards/IconCard'
+// import IconCard from '@/components/Cards/IconCard'
 import GradientCard from '@/components/Cards/GradientCard'
 import GradientWithRadialProgressCard from '@/components/Cards/GradientWithRadialProgressCard'
 import SmallLineChartCard from '@/components/Cards/SmallLineChartCard'
 
 import RadialProgressCard from '@/components/Cards/RadialProgressCard'
-import LineShadowChart from '@/components/Charts/LineShadow'
-import PolarAreaShadowChart from '@/components/Charts/PolarAreaShadow'
+// import LineShadowChart from '@/components/Charts/LineShadow'
+// import PolarAreaShadowChart from '@/components/Charts/PolarAreaShadow'
 import AreaShadowChart from '@/components/Charts/AreaShadow'
 
-import RecentOrderItem from '@/components/Listing/RecentOrderItem'
-import LogList from '@/components/Listing/LogList'
-import ListWithUserItem from '@/components/Listing/ListWithUserItem'
+// import RecentOrderItem from '@/components/Listing/RecentOrderItem'
+// import LogList from '@/components/Listing/LogList'
+// import ListWithUserItem from '@/components/Listing/ListWithUserItem'
 import TwoColumnList from '@/components/Listing/TwoColumnList'
 import TopRatedSlideItem from '@/components/Listing/TopRatedSlideItem'
 
@@ -288,21 +288,21 @@ import { apiUrl } from '@/constants/config'
 
 export default {
   components: {
-    IconCard,
+    // IconCard,
     GradientCard,
     swiper,
     swiperSlide,
     ResizeObserver,
-    LineShadowChart,
-    RecentOrderItem,
-    PolarAreaShadowChart,
+    // LineShadowChart,
+    // RecentOrderItem,
+    // PolarAreaShadowChart,
     AreaShadowChart,
-    LogList,
-    ListWithUserItem,
-    CalendarView,
-    CalendarViewHeader,
-    Vuetable,
-    VuetablePaginationBootstrap,
+    // LogList,
+    // ListWithUserItem,
+    // CalendarView,
+    // CalendarViewHeader,
+    // Vuetable,
+    // VuetablePaginationBootstrap,
     TwoColumnList,
     draggable,
     RadialProgressCard,
