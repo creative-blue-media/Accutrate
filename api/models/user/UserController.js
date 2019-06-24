@@ -164,8 +164,6 @@ module.exports = function(app, express) {
           token: token,
           user: user
         });
-
-        console.log("BLAHBLAH");
       });
     }).catch((e) => {
       res.status(400).send({
@@ -173,7 +171,6 @@ module.exports = function(app, express) {
         message: "Login Unsuccessful",
         error: e
       });
-      console.log("UNSUCCSEEFUL")
     });
   });
 
