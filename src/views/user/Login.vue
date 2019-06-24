@@ -14,12 +14,16 @@
                 <input type="password" class="form-control" v-model="password">
                 <span>{{ $t('user.password') }}</span>
               </label>
+              <b-collapse visible id="loginE">
+                <b-alert show variant="danger">{{ 'Invalid Entry' }}</b-alert>
+              </b-collapse>
               <div class="d-flex justify-content-between align-items-center">
                 <router-link tag="a" to="/user/forgot-password">{{ $t('user.forgot-password-question')}}</router-link>
               </div>
               <div class="d-flex justify-content-between align-items-center">
                   <router-link tag="a" to="/user/register" class="black"><b>Register Now</b></router-link>
-                  <b-button type="submit" variant="primary" size="lg" class="btn-shadow" :disabled="processing">{{ $t('user.login-button')}}</b-button>
+                  <!-- :disabled="processing" -->
+                  <b-button type="submit" variant="primary" size="lg" class="btn-shadow" >{{ $t('user.login-button')}}</b-button>
               </div>
           </b-form>
         </div>

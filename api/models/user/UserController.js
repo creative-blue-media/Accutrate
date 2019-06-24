@@ -151,9 +151,9 @@ module.exports = function(app, express) {
 
   // user log in
   userApi.post("/login", (req, res) => {
-    console.log("end point login??", req.body)
+    //console.log("end point login??", req.body)
     var body = _.pick(req.body, ['email', 'password']);
-    console.log("In login", body);
+    //console.log("In login", body);
 
     User.findByCredentials(body.email, body.password).then((user) => {
       return user.generateAuthToken().then((token) => {
@@ -165,7 +165,7 @@ module.exports = function(app, express) {
           user: user
         });
 
-        // console.log("Token is: ", token);
+        console.log("BLAHBLAH");
       });
     }).catch((e) => {
       res.status(400).send({
@@ -173,6 +173,7 @@ module.exports = function(app, express) {
         message: "Login Unsuccessful",
         error: e
       });
+      console.log("UNSUCCSEEFUL")
     });
   });
 

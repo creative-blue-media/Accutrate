@@ -133,6 +133,7 @@ UserSchema.statics.findByCredentials = function (email, password) {
 
   return User.findOne({ email: email }).then((user) => {
     if (!user) {
+      console.log("User Not Found");
       return Promise.reject();
     }
 
@@ -141,7 +142,8 @@ UserSchema.statics.findByCredentials = function (email, password) {
         if (res) {
           resolve(user);
         } else {
-          reject();
+          console.log("Invalid Password");
+          reject(err);
         }
       })
 
