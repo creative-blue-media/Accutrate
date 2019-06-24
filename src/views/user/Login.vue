@@ -14,9 +14,6 @@
                 <input type="password" class="form-control" v-model="password">
                 <span>{{ $t('user.password') }}</span>
               </label>
-              <b-collapse visible id="loginE">
-                <b-alert show variant="danger">{{ 'Invalid Entry' }}</b-alert>
-              </b-collapse>
               <div class="d-flex justify-content-between align-items-center">
                 <router-link tag="a" to="/user/forgot-password">{{ $t('user.forgot-password-question')}}</router-link>
               </div>

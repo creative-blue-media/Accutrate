@@ -31,9 +31,9 @@ export const apiUrl = 'https://api.coloredstrategies.com'
 
 export const currentUser = {
   id: 1,
-  title: 'Sarah Kortney',
+  title: null,
   img: '/assets/img/profile-pic-l.jpg',
-  date: 'Last seen today 15:24'
+  date: null
 }
 
 export const colors = ['light.purple', 'dark.purple', 'light.blue', 'dark.blue', 'light.green', 'dark.green', 'light.orange', 'dark.orange', 'light.red', 'dark.red']

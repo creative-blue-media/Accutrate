@@ -166,6 +166,7 @@ module.exports = function(app, express) {
         });
       });
     }).catch((e) => {
+      console.log(e);
       res.status(400).send({
         success: false,
         message: "Login Unsuccessful",

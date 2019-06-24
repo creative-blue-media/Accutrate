@@ -23,16 +23,14 @@
             <div class="user d-inline-block">
             <b-dropdown   class="dropdown-menu-right"  right variant="empty" toggle-class="p-0" menu-class="mt-3" no-caret>
                 <template slot="button-content">
-                  <span><img :alt="currentUser.title" :src="currentUser.img" /></span>
-                    Hi, <span  class="name mr-1">{{currentUser.title}}!</span>
+                  <span><img :alt="currentUser.title" :src="currentUser.image" /></span>
+                    Hi, <span  class="name mr-1">{{currentUser.firstname}} {{currentUser.lastname}}!</span>
                 </template>
-                <b-dropdown-item>Account</b-dropdown-item>
-                <b-dropdown-item>Features</b-dropdown-item>
-                <b-dropdown-item>History</b-dropdown-item>
-                <b-dropdown-item>Support</b-dropdown-item>
+                <b-dropdown-item>View Profile</b-dropdown-item>
+                <b-dropdown-item>Account Settings</b-dropdown-item>
                 <b-dropdown-divider />
                 <b-dropdown-item @click="logout">
-                  Sign out
+                  Sign Out
                 </b-dropdown-item>
             </b-dropdown>
           </div>

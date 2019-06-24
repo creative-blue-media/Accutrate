@@ -24,12 +24,11 @@
         </div> -->
 
         <div class="sub-menu">
-             <vue-perfect-scrollbar class="scroll" :settings="{ suppressScrollX: true, wheelPropagation: false }" >
+             <vue-perfect-scrollbar class="scroll " :settings="{ suppressScrollX: true, wheelPropagation: false }" >
                 <ul class="list-unstyled" data-link="dashboards" :class="{'d-block':selectedParentMenu==='dashboards' }">
-                    <router-link tag="li" to="/app/dashboards/default"><a><i class="simple-icon-briefcase"></i> {{ $t("menu.default") }}</a></router-link>
-                    <router-link tag="li" to="/app/dashboards/analytics"><a><i class="simple-icon-pie-chart"></i> {{ $t("menu.analytics") }}</a></router-link>
-                    <router-link tag="li" to="/app/dashboards/ecommerce"><a><i class="simple-icon-basket-loaded"></i> {{ $t("menu.ecommerce") }}</a></router-link>
-                    <router-link tag="li" to="/app/dashboards/content"><a><i class="simple-icon-doc"></i> {{ $t("menu.content") }}</a></router-link>
+                    <router-link tag="li" to="#"><span  class="name mr-1"> Hi, {{currentUser.firstname}} {{currentUser.lastname}}!</span></router-link>
+                    <router-link tag="li" to="/app/dashboards/default"><a><i class="simple-icon-briefcase"></i> {{ 'Profile' }}</a></router-link>
+                    <router-link tag="li" to="/app/dashboards/analytics"><a><i class="simple-icon-pie-chart"></i> {{ 'Settings' }}</a></router-link>
                 </ul>
 
                 <ul class="list-unstyled" data-link="pages" :class="{'d-block':selectedParentMenu==='pages' }">
@@ -225,7 +224,8 @@ export default {
     ...mapGetters({
       menuType: 'getMenuType',
       menuClickCount: 'getMenuClickCount',
-      selectedMenuHasSubItems: 'getSelectedMenuHasSubItems'
+      selectedMenuHasSubItems: 'getSelectedMenuHasSubItems',
+      currentUser: 'currentUser'
     })
   },
   watch: {
