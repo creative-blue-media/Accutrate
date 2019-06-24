@@ -63,6 +63,8 @@ export default {
           console.log('storage: ', JSON.parse(localStorage.getItem('user')))
           currentUser.title = response.data.user.firstname + ' ' + response.data.user.lastname
           commit('setUser', { uid: item.uid, ...currentUser })
+        }, (err) => {
+          console.log("THere is erer", err);
         })
       // firebase
       //   .auth()
