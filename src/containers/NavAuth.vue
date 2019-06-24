@@ -20,34 +20,22 @@
         </router-link>
 
           <div class="ml-auto">
-            <div  class="position-relative d-none d-sm-inline-block">
-                <b-dropdown variant="empty" size="sm" right toggle-class="header-icon" menu-class="position-absolute mt-3 iconMenuDropdown" no-caret>
-                    <template slot="button-content">
-                            <i class="simple-icon-grid" />
-                    </template>
-                    <div>
-                         <router-link tag="a" to="/app/dashboards/default" class="icon-menu-item">
-                            <i  class="iconsminds-shop-4 d-block" /> {{$t('menu.dashboards')}}
-                        </router-link>
-                        <router-link tag="a" to="/app/ui"  class="icon-menu-item">
-                            <i  class="iconsminds-pantone d-block" />{{$t('menu.ui')}}
-                        </router-link>
-                        <router-link tag="a" to="/app/ui/charts"  class="icon-menu-item">
-                            <i  class="iconsminds-bar-chart-4 d-block" />{{$t('menu.charts')}}
-                        </router-link>
-                        <router-link tag="a" to="/app/applications/chat" class="icon-menu-item">
-                            <i  class="iconsminds-speach-bubble d-block" />{{$t('menu.chat')}}
-                        </router-link>
-                        <router-link tag="a" to="/app/applications/survey" class="icon-menu-item">
-                            <i  class="iconsminds-formula d-block" />{{$t('menu.survey')}}
-                        </router-link>
-                        <router-link tag="a" to="/app/applications/todo" class="icon-menu-item">
-                            <i  class="iconsminds-check d-block" />{{$t('menu.todo')}}
-                        </router-link>
-                    </div>
-                </b-dropdown>
-            </div>
-
+            <div class="user d-inline-block">
+            <b-dropdown   class="dropdown-menu-right"  right variant="empty" toggle-class="p-0" menu-class="mt-3" no-caret>
+                <template slot="button-content">
+                  <span><img :alt="currentUser.title" :src="currentUser.img" /></span>
+                    Hi, <span  class="name mr-1">{{currentUser.title}}!</span>
+                </template>
+                <b-dropdown-item>Account</b-dropdown-item>
+                <b-dropdown-item>Features</b-dropdown-item>
+                <b-dropdown-item>History</b-dropdown-item>
+                <b-dropdown-item>Support</b-dropdown-item>
+                <b-dropdown-divider />
+                <b-dropdown-item @click="logout">
+                  Sign out
+                </b-dropdown-item>
+            </b-dropdown>
+          </div>
             <div  class="position-relative d-inline-block">
                 <b-dropdown variant="empty" size="sm" right toggle-class="header-icon notificationButton" menu-class="position-absolute mt-3 notificationDropdown" no-caret>
                     <template slot="button-content">
@@ -69,26 +57,6 @@
                     </vue-perfect-scrollbar>
                 </b-dropdown>
             </div>
-
-            <b-button variant="empty" class="header-icon d-none d-sm-inline-block" @click="toggleFullScreen">
-                <i  :class="{'d-block':true,'simple-icon-size-actual':fullScreen,'simple-icon-size-fullscreen':!fullScreen }" />
-            </b-button>
-          </div>
-          <div class="user d-inline-block">
-            <b-dropdown   class="dropdown-menu-right"  right variant="empty" toggle-class="p-0" menu-class="mt-3" no-caret>
-                <template slot="button-content">
-                    <span  class="name mr-1">{{currentUser.title}}</span>
-                    <span><img :alt="currentUser.title" :src="currentUser.img" /></span>
-                </template>
-                <b-dropdown-item>Account</b-dropdown-item>
-                <b-dropdown-item>Features</b-dropdown-item>
-                <b-dropdown-item>History</b-dropdown-item>
-                <b-dropdown-item>Support</b-dropdown-item>
-                <b-dropdown-divider />
-                <b-dropdown-item @click="logout">
-                  Sign out
-                </b-dropdown-item>
-            </b-dropdown>
           </div>
     </nav>
 </template>
