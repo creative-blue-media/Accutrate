@@ -69,7 +69,7 @@ const { required } = require('vuelidate/lib/validators')
 export default {
   components: {
     // InputTag,
-    // vSelect //
+    // vSelect
   },
   data () {
     return {
