@@ -27,7 +27,7 @@
                     Hi, <span  class="name mr-1">{{currentUser.firstname}} {{currentUser.lastname}}!</span>
                 </template>
                 <b-dropdown-item>View Profile</b-dropdown-item>
-                <b-dropdown-item>Account Settings</b-dropdown-item>
+                <b-dropdown-item><router-link tag="a" to="/app/settings"> Settings</router-link></b-dropdown-item>
                 <b-dropdown-divider />
                 <b-dropdown-item @click="logout">
                   Sign Out
