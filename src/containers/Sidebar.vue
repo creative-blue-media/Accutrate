@@ -29,7 +29,7 @@
                     <router-link tag="li" to="#"><span  class="name mr-1"> Hi, {{currentUser.firstname}} {{currentUser.lastname}}!</span></router-link>
                     <router-link tag="li" to="/app/dashboards/patient"><a><i class="simple-icon-briefcase"></i> {{ 'Profile' }}</a></router-link>
                     <router-link tag="li" to="/app/settings"><a><i class="simple-icon-pie-chart"></i> {{ 'Settings' }}</a></router-link>
-                    <router-link tag="li" to="/app/news"><a><i class="simple-icon-pie-chart"></i> {{ 'News' }}</a></router-link>
+                    <router-link tag="li" to="/app/pages/news"><a><i class="simple-icon-pie-chart"></i> {{ 'News' }}</a></router-link>
                 </ul>
 
                 <ul class="list-unstyled" data-link="pages" :class="{'d-block':selectedParentMenu==='pages' }">
