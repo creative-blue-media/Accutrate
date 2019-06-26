@@ -151,9 +151,9 @@ module.exports = function(app, express) {
 
   // user log in
   userApi.post("/login", (req, res) => {
-    console.log("end point login??", req.body)
+    //console.log("end point login??", req.body)
     var body = _.pick(req.body, ['email', 'password']);
-    console.log("In login", body);
+    //console.log("In login", body);
 
     User.findByCredentials(body.email, body.password).then((user) => {
       return user.generateAuthToken().then((token) => {
@@ -164,13 +164,18 @@ module.exports = function(app, express) {
           token: token,
           user: user
         });
-
-        // console.log("Token is: ", token);
       });
     }).catch((e) => {
+      var mes;
+      if(e != null){
+        mes = "User Not Found";
+      }
+      else{
+        mes = "Invalid Password"
+      }
       res.status(400).send({
         success: false,
-        message: "Login Unsuccessful",
+        message: mes,
         error: e
       });
     });

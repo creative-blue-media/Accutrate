@@ -1,4 +1,4 @@
-# piaf-vue
+# cbm-vue
 
 ## Project setup
 ```

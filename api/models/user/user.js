@@ -24,7 +24,7 @@ var UserSchema = new mongoose.Schema({
     minlength: 8
   },
   bio: String, 
-  image: {type: String, default: "acculogo.png"},
+  image: {type: String, default: '/assets/img/profile-pic-l.jpg'},
   username: {
     type: String, 
     required: true,
@@ -133,7 +133,8 @@ UserSchema.statics.findByCredentials = function (email, password) {
 
   return User.findOne({ email: email }).then((user) => {
     if (!user) {
-      return Promise.reject();
+      //console.log("User Not Found");
+      return Promise.reject("User Not Found");
     }
 
     return new Promise((resolve, reject) => {
@@ -141,7 +142,8 @@ UserSchema.statics.findByCredentials = function (email, password) {
         if (res) {
           resolve(user);
         } else {
-          reject();
+          //console.log("Invalid Password");
+          reject(err);
         }
       })
 
