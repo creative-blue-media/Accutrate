@@ -35,7 +35,8 @@ const routes = [
           { path: 'details', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Details') },
           { path: 'search', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Search') },
           { path: 'mailing', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Mailing') },
-          { path: 'invoice', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Invoice') }
+          { path: 'invoice', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Invoice') },
+          { path: 'news', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/News') }
         ]
       },
       {

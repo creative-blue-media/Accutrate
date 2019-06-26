@@ -46,6 +46,7 @@ export default {
     formSubmit () {
       // this.email = 'demo@gogo.com'
       // this.password = 'gogo123'
+      console.log('WTF, AM I BEING CALLED?')
       this.login({ email: this.email, password: this.password })
     }
   },

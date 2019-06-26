@@ -154,10 +154,8 @@ module.exports = function(app, express) {
     //console.log("end point login??", req.body)
     var body = _.pick(req.body, ['email', 'password']);
     //console.log("In login", body);
-
     User.findByCredentials(body.email, body.password).then((user) => {
       return user.generateAuthToken().then((token) => {
-
         res.header("x-auth", token).send({
           success: true,
           message: "Login Success",

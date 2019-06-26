@@ -14,45 +14,37 @@
 
               <b-colxx sm="6">
                 <b-form-group :label="$t('forms.email')">
-                  <b-form-input type="email" v-model="gridForm.email" />
+                  <b-form-input type="email" v-model="currentUser.email" />
                 </b-form-group>
               </b-colxx>
               <b-colxx sm="6">
                 <b-form-group :label="$t('forms.password')">
-                  <b-form-input type="password" v-model="gridForm.password"/>
+                  <b-form-input type="password" v-model="currentUser.password"/>
                 </b-form-group>
               </b-colxx>
-
               <b-colxx sm="12">
                 <b-form-group :label="$t('forms.address')">
-                  <b-form-input v-model="gridForm.address1" ></b-form-input>
+                  <b-form-input v-model="currentUser.address.street" placeholder="Address"></b-form-input>
                 </b-form-group>
               </b-colxx>
-
-              <b-colxx sm="12">
-                <b-form-group :label="$t('forms.address2')">
-                  <b-form-input v-model="gridForm.address2" ></b-form-input>
-                </b-form-group>
-              </b-colxx>
-
               <b-colxx sm="6">
                 <b-form-group :label="$t('forms.city')">
-                  <b-form-input v-model="gridForm.city" ></b-form-input>
+                  <b-form-input v-model="currentUser.address.city" placeholder="City"></b-form-input>
                 </b-form-group>
               </b-colxx>
               <b-colxx sm="4">
                 <b-form-group :label="$t('forms.state')">
-                  <b-form-select v-model="gridForm.state" :options="stateOptions" plain  />
+                  <b-form-select v-model="currentUser.address.state" :options="stateOptions" plain  />
                 </b-form-group>
               </b-colxx>
               <b-colxx sm="2">
                 <b-form-group :label="$t('forms.zip')">
-                  <b-form-input v-model="gridForm.zip" ></b-form-input>
+                  <b-form-input v-model="currentUser.address.zip" placeholder="Zip"></b-form-input>
                 </b-form-group>
               </b-colxx>
             </b-row>
 
-            <b-button type="submit" variant="primary" class="mt-4">{{ $t('forms.signin') }}</b-button>
+            <b-button type="submit" variant="primary" class="mt-4">{{ $t('forms.update') }}</b-button>
           </b-form>
         </b-card>
     </b-colxx>
@@ -62,6 +54,7 @@
 <script>
 // import InputTag from '@/components/Form/InputTag'
 // import vSelect from 'vue-select'
+import { mapGetters } from 'vuex'
 import 'vue-select/dist/vue-select.css'
 import { validationMixin } from 'vuelidate'
 const { required } = require('vuelidate/lib/validators')
@@ -136,7 +129,7 @@ export default {
         { label: 'Cookies and Cream', value: 'cookiescream' },
         { label: 'Peppermint', value: 'peppermint' }
       ],
-      stateOptions: ['', 'Option1', 'Option2', 'Option3', 'Option4', 'Option5']
+      stateOptions: [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ]
     }
   },
   mixins: [validationMixin],
@@ -155,6 +148,11 @@ export default {
         required
       }
     }
+  },
+  computed: {
+    ...mapGetters({
+      currentUser: 'currentUser'
+    })
   },
   methods: {
     onBasicSubmit () {

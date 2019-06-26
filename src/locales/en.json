@@ -82,7 +82,8 @@
     "hidden": "Hidden",
     "visible": "Visible",
     "tables": "Tables",
-    "maps": "Maps"
+    "maps": "Maps",
+    "news": "News"
   },
 
   "dashboards": {
@@ -128,7 +129,7 @@
     "files": "Files",
     "pending-for-print": "Pending for print",
     "logs": "Logs",
-    "cbm": "PIAF",
+    "cbm": "CBM",
     "magic-is-in-the-details": "MAGIC IS IN THE DETAILS",
     "yes-it-is-indeed": "Yes, it is indeed!",
     "advanced-search": "Advanced Search",
@@ -136,7 +137,8 @@
     "type": "Type",
     "keyword": "Keyword",
     "search": "Search",
-    "top-rated-items": "Top Rated Items"
+    "top-rated-items": "Top Rated Items",
+    "your-daily-news": "Your Daily News"
   },
   "pages": {
     "add-new": "ADD NEW",
@@ -395,6 +397,7 @@
     "state-message": "Please select a state!",
     "zip": "Zip",
     "signup": "Signup",
+    "update": "Update",
     "inline": "Inline",
     "validation": "Validation",
     "default": "Default",

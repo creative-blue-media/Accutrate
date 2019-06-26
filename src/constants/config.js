@@ -29,11 +29,11 @@ export const firebaseConfig = {
 
 export const apiUrl = 'https://api.coloredstrategies.com'
 
-export const currentUser = {
-  id: 1,
-  title: null,
-  img: '/assets/img/profile-pic-l.jpg',
-  date: null
-}
+// export const currentUser = {
+//   id: 1,
+//   firstname: null,
+//   img: '/assets/img/profile-pic-l.jpg',
+//   date: null
+// }
 
 export const colors = ['light.purple', 'dark.purple', 'light.blue', 'dark.blue', 'light.green', 'dark.green', 'light.orange', 'dark.orange', 'light.red', 'dark.red']

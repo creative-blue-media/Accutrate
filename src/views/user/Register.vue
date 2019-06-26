@@ -51,6 +51,7 @@ export default {
         email: this.email,
         password: this.password
       }
+      console.log('CREATING USER: ', user)
       // console.log('register', user)
       this.register(user)
       this.$router.push('/')

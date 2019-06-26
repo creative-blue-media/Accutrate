@@ -4,7 +4,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
-import { currentUser } from '@/constants/config'
+// import { currentUser } from '@/constants/config'
 
 Vue.use(VueAxios, axios)
 
@@ -53,15 +53,17 @@ export default {
         })
     },
     login ({ commit }, payload) {
+      console.log('HOW ABOUT ME?')
       commit('clearError')
       commit('setProcessing', true)
       Vue.axios.post('http://localhost:3000/api/users/login', payload)
         .then((response) => {
-          console.log('THIS IS THE DATA inside: ', response)
+          // console.log('THIS IS THE DATA inside: ', response)
+          // var user = response.data.user
+          console.log('asdfo', response.data.user.address)
           const item = { uid: response.data.user._id, token: response.data.token, ...response.data.user }
           localStorage.setItem('user', JSON.stringify(item))
           console.log('storage: ', JSON.parse(localStorage.getItem('user')))
-          currentUser.title = response.data.user.firstname + ' ' + response.data.user.lastname
           commit('setUser', { uid: item.uid, ...response.data.user })
         }, (err) => {
           console.log('THere is erer', err.response)

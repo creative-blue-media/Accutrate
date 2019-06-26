@@ -1,6 +1,6 @@
 <template>
   <b-row class="h-100">
-    <b-colxx xxs="12" md=4  class="">
+    <b-colxx xxs="12" md=12 class="">
     </b-colxx>
   </b-row>
 </template>
