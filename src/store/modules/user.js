@@ -52,6 +52,19 @@ export default {
           console.log('THIS IS DATA FROM API: ', response)
         })
     },
+    update ({ commit }, payload) {
+      // we are going to update user here
+      console.log('UPDATING THE USER')
+      commit('clearError')
+      commit('setProcessing', true)
+      Vue.axios.put('http://localhost:3000/api/users/user/update', payload)
+        .then((response) => {
+          console.log('USER WAS UPDATED: ', response.data)
+        }, (err) => {
+          console.log('UHOH')
+          commit('setError', err.response.data.message)
+        })
+    },
     login ({ commit }, payload) {
       console.log('HOW ABOUT ME?')
       commit('clearError')
@@ -60,8 +73,8 @@ export default {
         .then((response) => {
           // console.log('THIS IS THE DATA inside: ', response)
           var user = response.data.user
-          if(!user.address) {
-            user.address = {};
+          if (!user.address) {
+            user.address = {}
           }
           const item = { uid: response.data.user._id, token: response.data.token, ...user }
           localStorage.setItem('user', JSON.stringify(item))
