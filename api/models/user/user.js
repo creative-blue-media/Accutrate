@@ -46,11 +46,11 @@ var UserSchema = new mongoose.Schema({
     type: Schema.Types.ObjectId, ref: 'Blog' 
   }],
   address: {
-    street: { type: String, default: "street" },
-    unit: {type: String, default: "unit" },
-    city: { type: String, default: "city" },
-    state: { type: String, default: "state" },
-    zip: { type: String, default: "zip" }
+    street: { type: String },
+    unit: {type: String },
+    city: { type: String },
+    state: { type: String },
+    zip: { type: String }
   },
   preference: {
     edibles: Boolean,
