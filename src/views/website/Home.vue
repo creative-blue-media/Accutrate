@@ -17,9 +17,32 @@
     <b-container class="publications-section" fluid> 
       <b-container class="publications">
         <b-row class="home-pad">
-          <b-col xs=12 md=12>
+          <b-col xs=12 md=4>
            <h1>Publications</h1>
-
+          </b-col>
+        </b-row>
+        <b-row style="padding-bottom: 2vh;">
+          <b-col md=4>
+          </b-col>
+          <b-col md=8>
+              <b-container>
+                <b-row>
+                  <b-col md=6 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
+                  </b-col>
+                  <b-col md=6 style="height: 40vh; background: #fff;">
+                    <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
+                    <hr>
+                  </b-col>
+                </b-row>
+                <b-row>
+                  <b-col md=6 style="height: 40vh; background: #fff;">
+                    <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
+                    <hr>
+                  </b-col>
+                  <b-col md=6 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
+                  </b-col>
+                </b-row>
+              </b-container>
           </b-col>
         </b-row>
       </b-container>
