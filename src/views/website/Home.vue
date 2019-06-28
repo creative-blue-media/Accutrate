@@ -14,7 +14,7 @@
     </b-container>
     <div class="box">
     </div>
-    <b-container class="publications-section" fluid> 
+    <b-container class="publications-section" fluid>
       <b-container class="publications">
         <b-row class="home-pad">
           <b-col xs=12 md=4>
@@ -51,18 +51,19 @@
       <b-container class="shops">
         <b-row class="home-pad">
           <b-col xs=12 md=4>
-          <h1>Shop</h1>
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, 
-            consectetur adipiscing elit. 
-            Cras porta aliquet erat condimentum pulvinar. 
-            Nullam congue arcu ac turpis pretium venenatis 
-            elementum sit amet libero. Morbi eleifend suscipit 
-            velit luctus placerat. Quisque mattis neque sit amet 
-            lectus ornare, vel sagittis nibh tempor.</p>
+            <h1>Shop</h1>
+            <h2>Lorem Ipsum</h2>
+            <p>Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit.
+              Cras porta aliquet erat condimentum pulvinar.
+              Nullam congue arcu ac turpis pretium venenatis
+              elementum sit amet libero. Morbi eleifend suscipit
+              velit luctus placerat. Quisque mattis neque sit amet
+              lectus ornare, vel sagittis nibh tempor.
+            </p>
             <b-button class="mb-1 button-home">{{ 'Buy Now' }}</b-button>
-          </b-col>          
-        </b-row>
+          </b-col>
+          </b-row>
       </b-container>
     </b-container>
   </div>
