@@ -2,7 +2,7 @@
   <div class="root-home">
     <b-container class="home-header" fluid>
       <b-container class="h-header">
-        <b-row class="" style="padding: 14vh 14vw 14vh 14vw;">
+        <b-row class="home-pad">
           <b-col>
             <h1>Our mission is to ...</h1>
             <h2>We exist for two reasons</h2>
@@ -13,6 +13,20 @@
     </b-container>
     <div class="box">
     </div>
+    <b-container class="publications-section" fluid> 
+      <b-container class="publications">
+        <b-row class="home-pad">
+          <h1>Publications</h1>
+        </b-row>
+      </b-container>
+    </b-container>
+    <b-container class="shops-section" fluid>
+      <b-container class="shops">
+        <b-row class="home-pad">
+          <h1>Shop</h1>
+        </b-row>
+      </b-container>
+    </b-container>
   </div>
 </template>
 <script>

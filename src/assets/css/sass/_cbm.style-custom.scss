@@ -39,7 +39,7 @@
 .box {
     height: 50vh;
     width: 40vh;
-    background: linear-gradient(to bottom right, #5BBCDA, #fff);;
+    background: linear-gradient(to bottom right, #5BBCDA, #fff);
     position: absolute;
     right: -15px;
 /*     top: 5vh; */
@@ -53,10 +53,24 @@
     }
 }
 
-.publications-title {
+.publications-section {
+    color: $theme-color-1;
+    background: #fff;
     h1 {
-        color: #000;
+        border-bottom: 2px $theme-color-1 solid;
+        padding-bottom: 2px;
     }
 }
 
+.shops-section {
+    color: #fff;
+    background:linear-gradient(to bottom right, #5B2466, #401A2E);
+    h1 {
+        border-bottom: 2px #fff solid;
+        padding-bottom: 2px;
+    }
+}
 
+.home-pad {
+    padding: 14vh 14vw 14vh 14vw;
+}
