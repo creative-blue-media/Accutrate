@@ -31,10 +31,6 @@
         padding-bottom: 2px;
     }
     // this isn't working ...
-    .button-header {
-        background: #ef6036;
-        border-color: #ef6036;
-    }
 }
 
 .h-header {
@@ -68,7 +64,7 @@
 
 .shops-section {
     color: #fff;
-    background:linear-gradient(to bottom right, #5B2466, #401A2E);
+    background:linear-gradient(to bottom right, #57225D, #401A2E);
     h1 {
         border-bottom: 2px #fff solid;
         padding-bottom: 2px;
@@ -77,4 +73,9 @@
 
 .home-pad {
     padding: 13vh 13vw 13vh 13vw;
+}
+
+.button-home {
+    background: #ef6036;
+    border-color: #ef6036;
 }

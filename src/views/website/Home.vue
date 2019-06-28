@@ -3,11 +3,11 @@
     <b-container class="home-header" fluid>
       <b-container class="h-header">
         <b-row class="home-pad">
-          <b-col>
+          <b-col xs=12 md=4>
             <h1>Our mission is to ...</h1>
             <h2>We exist for two reasons</h2>
-            <p>to improve the quality of your daily life <br> and to extend the length of your life</p>
-            <b-button class="mb-1 button-header">{{ 'Learn More' }}</b-button>
+            <p>to improve the quality of your daily life and to extend the length of your life</p>
+            <b-button class="mb-1 button-home">{{ 'Learn More' }}</b-button>
           </b-col>
         </b-row>
       </b-container>
@@ -17,14 +17,28 @@
     <b-container class="publications-section" fluid> 
       <b-container class="publications">
         <b-row class="home-pad">
-          <h1>Publications</h1>
+          <b-col xs=12 md=12>
+           <h1>Publications</h1>
+
+          </b-col>
         </b-row>
       </b-container>
     </b-container>
     <b-container class="shops-section" fluid>
       <b-container class="shops">
         <b-row class="home-pad">
+          <b-col xs=12 md=4>
           <h1>Shop</h1>
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. 
+            Cras porta aliquet erat condimentum pulvinar. 
+            Nullam congue arcu ac turpis pretium venenatis 
+            elementum sit amet libero. Morbi eleifend suscipit 
+            velit luctus placerat. Quisque mattis neque sit amet 
+            lectus ornare, vel sagittis nibh tempor.</p>
+            <b-button class="mb-1 button-home">{{ 'Buy Now' }}</b-button>
+          </b-col>          
         </b-row>
       </b-container>
     </b-container>
