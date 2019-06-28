@@ -7,6 +7,7 @@
             <h1>Our mission is to ...</h1>
             <h2>We exist for two reasons</h2>
             <p>to improve the quality of your daily life <br> and to extend the length of your life</p>
+            <b-button class="mb-1 button-header">{{ 'Learn More' }}</b-button>
           </b-col>
         </b-row>
       </b-container>
