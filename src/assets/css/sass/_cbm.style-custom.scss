@@ -20,14 +20,23 @@
         border-bottom: 2px #fff solid;
         padding-bottom: 2px;
     }
-    // this isn't working ... 
-    .box {
-        float: right;
-        height: 70vh;
-        margin-top: 100px;
-        background: #000;
-       // background: linear-gradient(to bottom, #5BBCDA, #000) !important;
-    }
+    // this isn't working ...
+}
+
+.h-header {
+    position: relative;
+}
+.box {
+    height: 50vh;
+    width: 40vh;
+    background: linear-gradient(to bottom right, #5BBCDA, #fff);;
+    position: absolute;
+    right: -15px;
+/*     top: 5vh; */
+    bottom: 25vh;
+/*     z-index: 1; */
+    border-radius: 2%;
+   // background: linear-gradient(to bottom, #5BBCDA, #000) !important;
 }
 
 
