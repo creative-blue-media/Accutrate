@@ -8,7 +8,7 @@
 .home-header {
     position: relative;
     height: 85vh;
-    margin-top: $navbar-height;
+    padding-top: $navbar-height;
     background-size: contain;
     color: #000;
     background: linear-gradient(to bottom right, #5BBCDA, #fff);
@@ -18,16 +18,16 @@
 
     
     @include respond-below(xl) {
-        margin-top: $navbar-height-lg;
+        padding-top: $navbar-height-lg;
     }
 
     @include respond-below(lg) {
-        margin-top: $navbar-height-md;
+        padding-top: $navbar-height-md;
         // padding: 1.5rem $main-margin-md 1.5rem 0;
     }
 
     @include respond-below(sm) {
-        margin-top: $navbar-height-xs;
+        padding-top: $navbar-height-xs;
         // padding: $main-margin-xs;
     }
 
