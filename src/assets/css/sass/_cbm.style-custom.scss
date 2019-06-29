@@ -1,16 +1,14 @@
 .burger{
     width: 50px !important;
 }
-.Layer_1{
-    position: relative;
-    margin: auto 0;
-    width:100%;
-    height: 100vh;
+.curveSVG{
+    position: absolute;
+    bottom: -6px;
 }
 .home-header {
+    position: relative;
     height: 85vh;
     margin-top: $navbar-height;
-    
     background-size: contain;
     color: #000;
     background: linear-gradient(to bottom right, #5BBCDA, #fff);
