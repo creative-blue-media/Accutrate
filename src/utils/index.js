@@ -139,7 +139,7 @@ export const centerTextPlugin = {
   }
 }
 
-export var changeNavbar = function(){
-  // Not finished. On scroll event
-  document.getElementByClassName("navbar").style.background = '#fff';
-}
+// export var changeNavbar = function(){ 
+//   // Not finished. On scroll event
+//   document.getElementByClassName("navbar").style.background = '#fff';
+// }
