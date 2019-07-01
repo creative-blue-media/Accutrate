@@ -64,6 +64,17 @@ Vue.use(VCalendar, {
 Vue.use(VueScrollTo)
 firebase.initializeApp(firebaseConfig)
 
+Vue.directive('scroll', {
+  inserted: function (el, binding) {
+    let f = function (evt) {
+      if (binding.value(evt, el)) {
+        window.removeEventListener('scroll', f)
+      }
+    }
+    window.addEventListener('scroll', f)
+  }
+})
+
 export default new Vue({
   el: '#app',
   i18n,

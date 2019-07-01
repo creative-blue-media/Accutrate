@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar fixed-top">
+    <nav class="navbar fixed-top" v-scroll="handleScroll">
         <router-link class="navbar-logo" tag="a" to="#">
             <span class="logo d-none d-xs-block"></span>
             <span class="logo-mobile d-block d-xs-none"></span>
@@ -39,6 +39,8 @@
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 // import { MenuIcon, MobileMenuIcon } from '@/components/Svg'
+
+// import { changeNavbar } from '@/utils'
 
 import notifications from '@/data/notifications'
 import { searchPath, menuHiddenBreakpoint, localeOptions, buyUrl, homeUrl, publicationsUrl, resourcesUrl, shopUrl, contactUrl, learnmoreUrl, loginUrl } from '@/constants/config'
@@ -94,6 +96,22 @@ export default {
         this.searchKeyword = ''
       }
     },
+    handleScroll: function (evt, el) {
+      if (window.scrollY > 50) {
+        el.setAttribute(
+          'style',
+          'background: #fff'
+        )
+      } else if (window.scrollY < 50) {
+        el.setAttribute(
+          'style',
+          'background: transparent'
+        )
+      }
+    },
+    // changeNavbar () {
+    //   changeNavbar()
+    // },
     changeLocale (locale) {
       this.setLang(locale)
     },
