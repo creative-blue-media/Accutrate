@@ -360,7 +360,7 @@ hr {
 
 a {
   color: $primary-color;
-  transition: color $animation-time-short;
+  transition: color $animation-time-short; 
 
   &:hover,
   &:active {
