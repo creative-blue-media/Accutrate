@@ -30,7 +30,7 @@
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-0 mr-0" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
+                <a class="btn btn-primary btn-sm mb-0 mr-0" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
                 </div>
             </div>
         </div>

@@ -3,10 +3,11 @@
     <b-container class="home-header" fluid>
       <b-container class="h-header">
         <b-row class="home-pad">
-          <b-col xs=12 md=4>
-            <h1>Our mission is to ...</h1>
-            <h2>We exist for two reasons</h2>
-            <p>to improve the quality of your daily life and to extend the length of your life</p>
+          <b-col xs=12 md=8>
+            <h5>Better Breathing for Life</h5>
+            <h1 style="font-size: 4.5em;"><strong>Continuous SPO2 Monitoring Cloud Technology</strong></h1>
+            <h5>Live Longer, Breathe Better</h5>
+            <br>
             <b-button class="mb-1 button-home">{{ 'Learn More' }}</b-button>
           </b-col>
         </b-row>
@@ -25,33 +26,28 @@
     <b-container class="publications-section" fluid>
       <b-container class="publications">
         <b-row class="home-pad">
-          <b-col xs=12 md=4>
-           <h1>Publications</h1>
-          </b-col>
-        </b-row>
-        <b-row style="padding-bottom: 2vh;">
-          <b-col md=4>
-          </b-col>
-          <b-col md=8>
-              <b-container>
-                <b-row>
-                  <b-col md=6 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
-                  </b-col>
-                  <b-col md=6 style="height: 40vh; background: #fff;">
-                    <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
-                    <hr>
-                  </b-col>
-                </b-row>
-                <b-row>
-                  <b-col md=6 style="height: 40vh; background: #fff;">
-                    <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
-                    <hr>
-                  </b-col>
-                  <b-col md=6 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
-                  </b-col>
-                </b-row>
-              </b-container>
-          </b-col>
+          <b-row style="padding-bottom: 2vh;">
+            <b-col md=8>
+                <b-container>
+                  <b-row>
+                    <b-col md=12 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
+                    </b-col>
+                    <b-col md=12 style="height: 40vh; background: #fff;">
+                      <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
+                      <hr>
+                    </b-col>
+                  </b-row>
+                  <b-row>
+                    <b-col md=12 style="height: 40vh; background: #fff;">
+                      <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
+                      <hr>
+                    </b-col>
+                    <b-col md=12 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
+                    </b-col>
+                  </b-row>
+                </b-container>
+            </b-col>
+          </b-row>
         </b-row>
       </b-container>
     </b-container>
@@ -59,7 +55,7 @@
       <b-container class="shops">
         <b-row class="home-pad">
           <b-col xs=12 md=4>
-            <h1>Shop</h1>
+            <h1><Strong>Shop</Strong></h1>
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.

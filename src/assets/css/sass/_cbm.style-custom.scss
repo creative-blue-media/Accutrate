@@ -10,8 +10,8 @@
     height: 85vh;
     padding-top: $navbar-height;
     background-size: contain;
-    color: #000;
-    background: linear-gradient(to bottom right, #5BBCDA, #fff);
+    color: #304772;
+    background: linear-gradient(to bottom right, #fff, #5BBCDA);
     //background: url($curveSVG) ;
     //clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%);
     
@@ -32,7 +32,7 @@
     }
 
     h1 {
-        border-bottom: 2px #fff solid;
+      //  border-bottom: 2px #fff solid;
         padding-bottom: 2px;
     }
     // this isn't working ...
@@ -42,15 +42,17 @@
     position: relative;
 }
 .box {
-    height: 50vh;
-    width: 40vh;
-    background: linear-gradient(to bottom right, #5BBCDA, #fff);
+    height: 60vh;
+    width: 60vh;
+    background: linear-gradient(to bottom right,rgba(255, 255, 255, 0), #5BBCDA), url($headerImage);
+    background-position: center right;
+    background-size: cover;
     position: absolute;
-    right: 0px;
+    right: 5%;
 /*     top: 5vh; */
     bottom: 25vh;
 /*     z-index: 1; */
-    border-radius: 2% 0 0 2%;
+    border-radius: 25%;
    //background: linear-gradient(to bottom, #5BBCDA, #000) !important;
    @include respond-below(sm) {
         display: none;
@@ -69,7 +71,7 @@
 
 .shops-section {
     color: #fff;
-    background:linear-gradient(to bottom right, #57225D, #401A2E);
+    background:linear-gradient(to bottom right, #5BBCDA, #304772);
     h1 {
         border-bottom: 2px #fff solid;
         padding-bottom: 2px;
@@ -77,10 +79,11 @@
 }
 
 .home-pad {
-    padding: 13vh 13vw 6vh 13vw;
+    position: relative;
+    padding: 10vh;
 }
 
 .button-home {
-    background: #ef6036;
-    border-color: #ef6036;
+    background: #304772;
+    border-color: #304772;
 }
