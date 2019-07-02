@@ -28,7 +28,7 @@
                 </b-dropdown>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-right">
+            <div class="header-icons d-inline-block align-right" id="login_button">
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <a class="btn btn-outline-primary btn-sm mb-0 mr-0" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
                 </div>
@@ -97,15 +97,25 @@ export default {
       }
     },
     handleScroll: function (evt, el) {
+      console.log(evt)
+      console.log(el.children[1].lastElementChild)
       if (window.scrollY > 70) {
         el.setAttribute(
           'style',
           'background: #fff; height: 10vh'
         )
+        el.getElementsByClassName('btn-outline-primary')[0].setAttribute(
+          'style',
+          'color: #5BBCDA; border-color: #5BBCDA'
+        )
       } else if (window.scrollY < 70) {
         el.setAttribute(
           'style',
           'color: #ff0000' // 'background: transparent'
+        )
+        el.getElementsByClassName('btn-outline-primary')[0].setAttribute(
+          'style',
+          'color: #000'
         )
       }
     },
