@@ -97,15 +97,15 @@ export default {
       }
     },
     handleScroll: function (evt, el) {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 70) {
         el.setAttribute(
           'style',
-          'background: #fff'
+          'background: #fff; height: 10vh'
         )
-      } else if (window.scrollY < 50) {
+      } else if (window.scrollY < 70) {
         el.setAttribute(
           'style',
-          'background: transparent'
+          'color: #ff0000' // 'background: transparent'
         )
       }
     },
