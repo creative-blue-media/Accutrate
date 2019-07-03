@@ -45,12 +45,12 @@
     height: 60vh;
     width: 60vh;
     background: linear-gradient(to bottom right,rgba(255, 255, 255, 0), #5BBCDA), url($headerImage);
-    background-position: center right;
+    background-position: center;
     background-size: cover;
-    position: absolute;
-    right: 5%;
+    //position: absolute;
+    //right: 5%;
 /*     top: 5vh; */
-    bottom: 25vh;
+    //bottom: 25vh;
 /*     z-index: 1; */
     border-radius: 25%;
    //background: linear-gradient(to bottom, #5BBCDA, #000) !important;
