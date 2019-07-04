@@ -29,15 +29,15 @@
           <b-row style="padding-bottom: 2vh;">
             <!-- <b-col md=12> -->
               <b-container fluid>
-                <b-row>
-                  <b-col md=12 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
+                <b-row style="width: 80vw;">
+                  <b-col xs=12 md=12 style="height: 40vh; border-radius: 2%; background: linear-gradient(to bottom right, #5BBCDA, #fff);">
                   </b-col>
-                  <b-col md=12 style="height: 40vh; background: #fff;">
+                  <b-col xs=12 md=12 style="height: 40vh; background: #fff;">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
                   </b-col>
                 </b-row>
-                <b-row>
+                <b-row style="width: 80vw;">
                   <b-col md=12 style="height: 40vh; background: #fff;">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
