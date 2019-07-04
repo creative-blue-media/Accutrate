@@ -70,6 +70,36 @@
           </b-row>
       </b-container>
     </b-container>
+    <b-container fluid>
+      <b-container>
+        <b-row>
+          <h1>Contact</h1>
+        </b-row>
+        <b-row>
+          <b-col xxs="12">
+              <b-card class="mb-4" :title="$t('forms.validation')">
+                <b-form > 
+                  <b-row>
+                    <b-col sm="6">
+                      <b-form-group :label="$t('forms.firstname')"  >
+                        <b-form-input type="text" v-model="prospect.name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
+                        <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
+                      </b-form-group>
+                    </b-col>
+                    <b-col sm="6">
+                      <b-form-group :label="$t('forms.lastname')">
+                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-invalid-feedback>{{ $t('forms.lastname-message')}}</b-form-invalid-feedback>
+                      </b-form-group>
+                    </b-col>
+                  </b-row>
+                  <b-button type="submit" variant="primary" class="mt-4">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
+                </b-form>
+              </b-card>
+          </b-col>
+        </b-row>
+      </b-container>
+    </b-container>
   </div>
 </template>
 <script>
@@ -84,7 +114,12 @@ export default {
   data () {
     return {
       email: '',
-      password: ''
+      password: '',
+      prospect: {
+        name: '',
+        company: '',
+        email: ''
+      }
     }
   },
   computed: {
