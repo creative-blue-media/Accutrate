@@ -78,7 +78,7 @@
         <b-row>
           <b-col xxs="12">
               <b-card class="mb-4" :title="$t('forms.validation')">
-                <b-form > 
+                <b-form>
                   <b-row>
                     <b-col sm="6">
                       <b-form-group :label="$t('forms.firstname')"  >
