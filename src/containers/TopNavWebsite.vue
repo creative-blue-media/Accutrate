@@ -12,6 +12,15 @@
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
+                <b-dropdown id="ddown1" :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.problem')}}</a></b-dropdown-item>
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.solution')}}</a></b-dropdown-item>
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a></b-dropdown-item>
+                </b-dropdown>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-right">
+                <div class="position-relative d-none d-none d-lg-inline-block">
                 <a class="btn primary btn-sm mb-0 mr-0" target="_top" :href="homeUrl">{{$t('website.government')}}</a>
                 </div>
             </div>
@@ -23,15 +32,6 @@
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <a class="btn btn-sm mb-0 mr-0" target="_top" :href="contactUrl">{{$t('website.contact')}}</a>
-                </div>
-            </div>
-            <div class="header-icons d-inline-block align-right">
-                <div class="position-relative d-none d-none d-lg-inline-block">
-                <b-dropdown id="ddown1" :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.problem')}}</a></b-dropdown-item>
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.solution')}}</a></b-dropdown-item>
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a></b-dropdown-item>
-                </b-dropdown>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right" id="login_button" v-if="0">
