@@ -11,7 +11,7 @@
     padding-top: $navbar-height;
     background-size: contain;
     color: #304772;
-    background: linear-gradient(to bottom right, #fff, #5BBCDA);
+    background: linear-gradient(to bottom right, #fff, #77B2E6);
     //background: url($curveSVG) ;
     //clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%);
     
@@ -44,7 +44,7 @@
 .box {
     height: 60vh;
     width: 60vh;
-    background: linear-gradient(to bottom right,rgba(255, 255, 255, 0), #5BBCDA), url($headerImage);
+    background: linear-gradient(to bottom right,rgba(255, 255, 255, 0), #77B2E6), url($headerImage);
     background-position: center;
     background-size: cover;
     //position: absolute;
@@ -71,7 +71,7 @@
 
 .shops-section {
     color: #fff;
-    background:linear-gradient(to bottom right, #5BBCDA, #304772);
+    background:linear-gradient(to bottom right, #77B2E6, #304772);
     h1 {
         border-bottom: 2px #fff solid;
         padding-bottom: 2px;
@@ -84,6 +84,6 @@
 }
 
 .button-home {
-    background: #304772;
-    border-color: #304772;
+    background: #E95959;
+    border-color: #E95959;
 }
