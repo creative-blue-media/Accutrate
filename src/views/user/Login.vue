@@ -1,7 +1,7 @@
 <template>
   <b-row class="h-100">
-    <b-colxx xxs="6" md=6  class="mx-auto my-auto">
-      <b-card class="auth-card">
+    <b-colxx xxs="6" md=6  class="mx-auto my-auto" >
+      <b-card class="auth-card" style="background: #fff">
           <div class="form-side">
             <!-- <router-link tag="a" to="/"><span class="logo-single"/></router-link> -->
             <h6 class="mb-4">{{ $t('user.login-title')}}</h6>

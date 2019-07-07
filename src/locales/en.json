@@ -540,12 +540,16 @@
     "vue-scrollable": "Scrollable"
   },
   "website": {
-    "home": "HOME",
+    "company": "COMPANY",
     "login": "LOGIN",
     "publications": "PUBLICATIONS",
     "resources": "RESOURCES",
-    "shop": "SHOP",
+    "technology": "WHAT WE ARE SOLVING",
     "contact": "CONTACT",
-    "learnmore": "LEARN MORE"
+    "learnmore": "LEARN MORE",
+    "problem": "THE PROBLEM",
+    "solution": "OUR SOLUTION",
+    "government": "GOVERNMENT",
+    "investors": "INVESTORS"
   }
 }

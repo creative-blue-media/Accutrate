@@ -1,9 +1,9 @@
 <template>
     <div id="root">
-        <div class="fixed-background"></div>
+        <!-- <div ></div> -->
+        <top-nav-web/>
         <main>
-            <div class="container-fluid">
-                <top-nav-web/>
+            <div class="container-fluid website-home fixed-background">
                 <router-view/>
             </div>
         </main>

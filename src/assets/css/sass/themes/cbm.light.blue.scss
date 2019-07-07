@@ -1,7 +1,7 @@
 $separator-color-light: #f3f3f3;
 $separator-color: #d7d7d7;
 $background-color: #f8f8f8;
-$foreground-color : white;
+$foreground-color : rgba(255, 255, 255, 0);
 $input-background: white;
 
 $dark-btn-background: #131113;
@@ -16,7 +16,7 @@ $theme-color-4: #365573;
 $theme-color-5: #47799a;
 $theme-color-6: #8e9599;
 
-$primary-color: #212121;
+$primary-color: #304772;
 $secondary-color: #8f8f8f;
 $muted-color: #909090;
 
@@ -35,6 +35,8 @@ $shadowOpacitiesBottom: 0.04 0.1 0.2 0.22 0.22;
 $logoPath: "/assets/img/LogoFinal.svg";
 $logoPathSingle: "/assets/img/LogoFinalSingle.svg";
 $logoPathMobile: "/assets/img/LogoFinalSingle.svg";
+$curveSVG: "/assets/img/backgroundCurve.svg";
+$headerImage: "/assets/img/elderly_scaled.png";
 
 @import "../_mixins.scss";
 @import "../_cbm.style.scss";

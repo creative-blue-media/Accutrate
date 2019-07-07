@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar fixed-top">
+    <nav class="navbar fixed-top" v-scroll="handleScroll">
         <router-link class="navbar-logo" tag="a" to="#">
             <span class="logo d-none d-xs-block"></span>
             <span class="logo-mobile d-block d-xs-none"></span>
@@ -7,12 +7,26 @@
         <div class="ml-auto">
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn primary btn-sm mb-0 mr-0" target="_top" :href="homeUrl">{{$t('website.home')}}</a>
+                <a class="btn primary btn-sm mb-0 mr-0" target="_top" :href="homeUrl">{{$t('website.company')}}</a>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-sm mb-0 mr-0" target="_top" :href="shopUrl">{{$t('website.shop')}}</a>
+                <b-dropdown id="ddown1" :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.problem')}}</a></b-dropdown-item>
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.solution')}}</a></b-dropdown-item>
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a></b-dropdown-item>
+                </b-dropdown>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-right">
+                <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn primary btn-sm mb-0 mr-0" target="_top" :href="homeUrl">{{$t('website.government')}}</a>
+                </div>
+            </div>
+            <div class="header-icons d-inline-block align-right">
+                <div class="position-relative d-none d-none d-lg-inline-block">
+                <a class="btn btn-sm mb-0 mr-0" target="_top" :href="shopUrl">{{$t('website.investors')}}</a>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
@@ -20,17 +34,9 @@
                 <a class="btn btn-sm mb-0 mr-0" target="_top" :href="contactUrl">{{$t('website.contact')}}</a>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-right">
+            <div class="header-icons d-inline-block align-right" id="login_button" v-if="0">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <b-dropdown id="ddown1" :text="'LEARN MORE'" class="mb-0 mr-0" variant="outline">
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.publications')}}</a></b-dropdown-item>
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a></b-dropdown-item>
-                </b-dropdown>
-                </div>
-            </div>
-            <div class="header-icons d-inline-block align-right">
-                <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-outline-primary btn-sm mb-0 mr-0" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
+                <a class="btn btn-primary btn-sm mb-0 mr-0" target="_top" :href="loginUrl">{{$t('website.login')}}</a>
                 </div>
             </div>
         </div>
@@ -39,6 +45,8 @@
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
 // import { MenuIcon, MobileMenuIcon } from '@/components/Svg'
+
+// import { changeNavbar } from '@/utils'
 
 import notifications from '@/data/notifications'
 import { searchPath, menuHiddenBreakpoint, localeOptions, buyUrl, homeUrl, publicationsUrl, resourcesUrl, shopUrl, contactUrl, learnmoreUrl, loginUrl } from '@/constants/config'
@@ -94,6 +102,30 @@ export default {
         this.searchKeyword = ''
       }
     },
+    handleScroll: function (evt, el) {
+      if (window.scrollY > 70) {
+        el.setAttribute(
+          'style',
+          'background: #fff; height: 10vh; transition: .2s'
+        )
+        el.getElementsByClassName('btn-outline-primary')[0].setAttribute(
+          'style',
+          'color: #5BBCDA; border-color: #5BBCDA'
+        )
+      } else if (window.scrollY < 70) {
+        el.setAttribute(
+          'style',
+          'color: #ff0000; transition: .2s' // 'background: transparent'
+        )
+        el.getElementsByClassName('btn-outline-primary')[0].setAttribute(
+          'style',
+          'color: #000'
+        )
+      }
+    },
+    // changeNavbar () {
+    //   changeNavbar()
+    // },
     changeLocale (locale) {
       this.setLang(locale)
     },
