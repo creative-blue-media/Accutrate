@@ -109,7 +109,7 @@
                     </b-col>
                     <b-col sm="3">
                       <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
+                        <b-form-input type="text" v-model="name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
                         <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -159,6 +159,7 @@ export default {
       },
       set: function (newnames) {
         var names = newnames.split(' ')
+        console.log("NAMES:", names)
         this.prospect.firstname = names[0]
         this.prospect.lastname = names[names.length - 1]
       }
