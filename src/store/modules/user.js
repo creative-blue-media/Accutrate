@@ -55,6 +55,11 @@ export default {
     saveProspectInfo ({ commit }, payload) {
       commit('clearError')
       console.log('in svae prospect', payload)
+      Vue.axios.post('http://localhost:3000/api/prospects', payload)
+        .then((response) => {
+          console.log('THIS IS RESPONSE FROM PROSPECT API: ', response)
+        })
+      
     },
     update ({ commit }, payload) {
       // we are going to update user here
