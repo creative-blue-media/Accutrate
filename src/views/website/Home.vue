@@ -17,13 +17,13 @@
                     <h2 style="padding:10px;">Get More Information</h2>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
+                        <b-form-input type="text" v-model="prospect.firstname" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
                         <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.lastname')">
-                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-input type="text" v-model="prospect.lastname"/>
                         <b-form-invalid-feedback>{{ $t('forms.lastname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -106,7 +106,7 @@
                   <b-row>
                     <b-col sm="3">
                       <h2>Subscribe to recieve the latest news</h2>
-                    </b-col>  
+                    </b-col>
                     <b-col sm="3">
                       <b-form-group :label="$t('forms.firstname')"  >
                         <b-form-input type="text" v-model="prospect.name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
@@ -145,12 +145,24 @@ export default {
       password: '',
       prospect: {
         name: '',
+        firstname: '',
+        lastname: '',
         company: '',
         email: ''
       }
     }
   },
   computed: {
+    name: {
+      get: function () {
+        return this.prospect.firstname + ' ' + this.prospect.lastname
+      },
+      set: function (newnames) {
+        var names = newnames.split(' ')
+        this.prospect.firstname = names[0]
+        this.prospect.lastname = names[names.length - 1]
+      }
+    },
     ...mapGetters(['currentUser', 'processing', 'loginError'])
   },
   methods: {
