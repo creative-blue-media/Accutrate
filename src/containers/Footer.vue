@@ -1,62 +1,13 @@
 <template>
-    <nav class="navbar fixed-top">
-        <a href="#" class="menu-button burger d-none d-md-block" @click.prevent="changeSideMenuStatus({step :menuClickCount+1,classNames:menuType})">
-            <menu-icon/>
-        </a>
-        <a href="#" class="menu-button-mobile d-xs-block d-sm-block d-md-none" @click.prevent="changeSideMenuForMobile(menuType)">
-            <mobile-menu-icon/>
-        </a>
-        <div  class="d-inline-block">
-            <!-- <b-dropdown id="langddm" class="ml-2" variant="light" size="sm" toggle-class="language-button">
-                <template slot="button-content">
-                        <span  class="name">{{$i18n.locale.toUpperCase()}}</span>
-                </template>
-                <b-dropdown-item v-for="(l,index) in localeOptions" :key="index" @click="changeLocale(l.id)">{{l.name}}</b-dropdown-item>
-            </b-dropdown> -->
-        </div>
-        <router-link class="navbar-logo" tag="a" to="/app">
-            <span class="logo d-none d-xs-block"></span>
-            <span class="logo-mobile d-block d-xs-none"></span>
-        </router-link>
-
-          <div class="ml-auto">
-            <div class="user d-inline-block">
-            <b-dropdown   class="dropdown-menu-right"  right variant="empty" toggle-class="p-0" menu-class="mt-3" no-caret>
-                <template slot="button-content">
-                  <span><img :alt="currentUser.title" :src="currentUser.image" /></span>
-                    Hi, <span  class="name mr-1">{{currentUser.firstname}} {{currentUser.lastname}}!</span>
-                </template>
-                <b-dropdown-item>View Profile</b-dropdown-item>
-                <b-dropdown-item><router-link tag="a" to="/app/settings"> Settings</router-link></b-dropdown-item>
-                <b-dropdown-divider />
-                <b-dropdown-item @click="logout">
-                  Sign Out
-                </b-dropdown-item>
-            </b-dropdown>
-          </div>
-            <div  class="position-relative d-inline-block">
-                <b-dropdown variant="empty" size="sm" right toggle-class="header-icon notificationButton" menu-class="position-absolute mt-3 notificationDropdown" no-caret>
-                    <template slot="button-content">
-                            <i class="simple-icon-bell" />
-                            <span class="count">3</span>
-                    </template>
-                    <vue-perfect-scrollbar :settings="{ suppressScrollX: true, wheelPropagation: false }"  >
-                        <div class="d-flex flex-row mb-3 pb-3 border-bottom" v-for="(n,index) in notifications" :key="index">
-                            <router-link tag="a" to="/app/pages/details">
-                                <img :src="n.img" :alt="n.title" class="img-thumbnail list-thumbnail xsmall border-0 rounded-circle"/>
-                            </router-link>
-                            <div  class="pl-3 pr-2">
-                                <router-link tag="a" to="/app/pages/details">
-                                    <p  class="font-weight-medium mb-1">{{n.title}}</p>
-                                    <p  class="text-muted mb-0 text-small">{{n.date}}</p>
-                                </router-link>
-                            </div>
-                        </div>
-                    </vue-perfect-scrollbar>
-                </b-dropdown>
-            </div>
-          </div>
-    </nav>
+   <div class="footer fixed-bottom">
+    <b-container class="home-header" fluid>
+      <b-container class="h-header">
+        <b-row class="home-pad" style="z-index: 999;">
+          <h1>FOOTER</h1>
+        </b-row>
+      </b-container>
+    </b-container>
+    </div>
 </template>
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'

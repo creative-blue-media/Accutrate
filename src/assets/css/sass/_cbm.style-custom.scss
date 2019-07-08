@@ -9,9 +9,14 @@
     position: relative;
     height: 85vh;
     padding-top: $navbar-height;
-    background-size: contain;
-    color: #304772;
-    background: linear-gradient(to bottom right, #fff, #77B2E6);
+    color: #304772; //#304772; //#77B2E6
+    //background: linear-gradient(to bottom,rgba(100, 100, 100, 0), #77B2E6), url($headerImage);
+    background: linear-gradient(to top,rgba(255, 255, 255, 0), white), url($cloudBackground);
+    //background: linear-gradient(to top left, #77B2E6, white);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: white; 
     //background: url($curveSVG) ;
     //clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%);
     
@@ -37,22 +42,36 @@
     }
     // this isn't working ...
 }
-
+#ddown1__BV_toggle_ {
+    background-color: rgba(255, 255, 255, 0);
+}
 .h-header {
     position: relative;
 }
+.header-text {
+    margin:0;
+    vertical-align: middle;
+}
+.header-form {
+    width:40vh;
+    float:right;
+    color:white;
+    background:linear-gradient(to bottom right, #395589, #304772);
+    padding: 10px;
+}
 .box {
-    height: 60vh;
-    width: 60vh;
-    background: linear-gradient(to bottom right,rgba(255, 255, 255, 0), #77B2E6), url($headerImage);
-    background-position: center;
+    height: auto;
+    width: 50vh;
+   // background: linear-gradient(to bottom right,rgba(255, 255, 255, 0), #77B2E6), url($headerImage);
+    background-position: right;
     background-size: cover;
+    // background-color: #304772;
     //position: absolute;
     //right: 5%;
 /*     top: 5vh; */
     //bottom: 25vh;
 /*     z-index: 1; */
-    border-radius: 25%;
+    // border-radius: 25%;
    //background: linear-gradient(to bottom, #5BBCDA, #000) !important;
    @include respond-below(sm) {
         display: none;
@@ -62,7 +81,7 @@
 
 .publications-section {
     color: $theme-color-1;
-    background: #fff;
+    background: #F5F9FD;
     h1 {
         border-bottom: 2px $theme-color-1 solid;
         padding-bottom: 2px;
@@ -71,11 +90,29 @@
 
 .shops-section {
     color: #fff;
-    background:linear-gradient(to bottom right, #77B2E6, #304772);
+    background:linear-gradient(to bottom right, #77B2E6,  #401B2E);
     h1 {
         border-bottom: 2px #fff solid;
         padding-bottom: 2px;
     }
+}
+.contact-section {
+    color: #304772;
+    background:white;
+    height:auto;
+    width:100%;
+    h1 {
+        padding-bottom: 2px;
+    }
+}
+
+.footer-contact {
+    margin: 0 auto;
+    position:relative;
+    width:100%;
+    -webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .home-pad {
@@ -84,6 +121,13 @@
 }
 
 .button-home {
-    background: #E95959;
-    border-color: #E95959;
+    //background: #401B2E;
+    border:none;
+    background:linear-gradient(to bottom right,#5B2466, #401B2E);
+}
+
+.footer {
+    position: absolute;
+    z-index: 100;
+    background-color: pink;
 }
