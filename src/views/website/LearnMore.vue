@@ -13,7 +13,7 @@
             </router-link>
           </b-col>
           <b-col xs="12">
-              <b-modal id="modalbasic" ref="modalbasic" :title="$t('modal.modal-title')">
+              <b-modal id="modalbasic" ref="modalbasic" :title="$t('modal.modal-title')" :hide-backdrop="true">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                   sed do eiusmod tempor incididunt ut labore et dolore magna
                   aliqua. Ut enim ad minim veniam, quis nostrud exercitation
