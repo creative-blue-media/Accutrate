@@ -52,6 +52,10 @@ export default {
           console.log('THIS IS DATA FROM API: ', response)
         })
     },
+    saveProspectInfo ({ commit }, payload) {
+      commit('clearError')
+      console.log('in svae prospect', payload)
+    },
     update ({ commit }, payload) {
       // we are going to update user here
       console.log('UPDATING THE USER')

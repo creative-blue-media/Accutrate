@@ -34,7 +34,7 @@
                       </b-form-group>
                     </b-col>
                   </b-row>
-                  <b-button style="width:100%;" type="submit" variant="primary" class="mt-4">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
+                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
                 </b-form>
               </b-card>
           </div>
@@ -175,12 +175,16 @@ export default {
     ...mapGetters(['currentUser', 'processing', 'loginError'])
   },
   methods: {
-    ...mapActions(['login']),
+    ...mapActions(['login', 'saveProspectInfo']),
     formSubmit () {
       console.log('WHER DOES THIS GO?')
       // this.email = 'demo@gogo.com'
       // this.password = 'gogo123'
       this.login({ email: this.email, password: this.password })
+    },
+    getProspectInfo () {
+      console.log('GETTING INFO:')
+      this.saveProspectInfo({firstname: this.prospect.firstname, lastname: this.prospect.lastname, email: this.prospect.email})
     }
   },
   watch: {
