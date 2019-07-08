@@ -3,7 +3,7 @@
   <div>
     <b-row>
       <b-colxx xxs="12">
-        <cbm-breadcrumb :heading="$t('menu.patient')"/>
+        <cbm-breadcrumb :heading="$t('menu.employee')"/>
         <div class="separator mb-5"></div>
       </b-colxx>
     </b-row>
