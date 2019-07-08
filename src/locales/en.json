@@ -551,5 +551,8 @@
     "solution": "OUR SOLUTION",
     "government": "GOVERNMENT",
     "investors": "INVESTORS"
+  },
+  "crm": {
+    "prospects": "PROSPECTS"
   }
 }

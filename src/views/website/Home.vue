@@ -184,7 +184,7 @@ export default {
     },
     getProspectInfo () {
       console.log('GETTING INFO:')
-      this.saveProspectInfo({firstname: this.prospect.firstname, lastname: this.prospect.lastname, email: this.prospect.email})
+      this.saveProspectInfo({ firstname: this.prospect.firstname, lastname: this.prospect.lastname, email: this.prospect.email })
     }
   },
   watch: {

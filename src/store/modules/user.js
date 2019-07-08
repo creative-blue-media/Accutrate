@@ -59,7 +59,6 @@ export default {
         .then((response) => {
           console.log('THIS IS RESPONSE FROM PROSPECT API: ', response)
         })
-      
     },
     update ({ commit }, payload) {
       // we are going to update user here
