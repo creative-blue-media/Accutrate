@@ -29,7 +29,7 @@
                     </b-col>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.email')">
-                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-input type="text" v-model="prospect.email"/>
                         <b-form-invalid-feedback>{{ $t('forms.email-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -115,7 +115,7 @@
                     </b-col>
                     <b-col sm="3">
                       <b-form-group :label="$t('forms.email')">
-                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-input type="text" v-model="prospect.email"/>
                         <b-form-invalid-feedback>{{ $t('forms.email-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -154,14 +154,27 @@ export default {
   },
   computed: {
     name: {
-      get: function () {
-        return this.prospect.firstname + ' ' + this.prospect.lastname
-      },
-      set: function (newnames) {
-        var names = newnames.split(' ')
-        console.log("NAMES:", names)
-        this.prospect.firstname = names[0]
-        this.prospect.lastname = names[names.length - 1]
+      // get: function () {
+      //   return this.prospect.firstname + ' ' + this.prospect.lastname
+      // },
+      set: function (newFullName) {
+        const names = newFullName.split(' ')
+
+        if (names.length === 2) {
+          this.prospect.firstname = names[0]
+          this.prospect.lastname = names[1]
+        }
+        if (names.length <= 1) {
+          this.prospect.firstname = names[0] || ''
+          this.prospect.lastname = ''
+        }
+      }
+    },
+    lastname: {
+      set: function (lm) {
+        if (this.hasFirstName()) {
+          this.name = this.prospect.firstname + this.prospect.lastname
+        }
       }
     },
     ...mapGetters(['currentUser', 'processing', 'loginError'])
@@ -173,6 +186,9 @@ export default {
       // this.email = 'demo@gogo.com'
       // this.password = 'gogo123'
       this.login({ email: this.email, password: this.password })
+    },
+
+    hasFirstName () {
     }
   },
   watch: {
