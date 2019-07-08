@@ -551,7 +551,8 @@
     "problem": "THE PROBLEM",
     "solution": "OUR SOLUTION",
     "government": "GOVERNMENT",
-    "investors": "INVESTORS"
+    "investors": "INVESTORS",
+    "tech": ["ACCUSENSOR", "ACCUTITRATOR"]
   },
   "crm": {
     "prospects": "PROSPECTS"

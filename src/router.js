@@ -96,9 +96,11 @@ const routes = [
       { path: 'home', component: () => import(/* webpackChunkName: "website" */ './views/website/Home') },
       { path: 'publications', component: () => import(/* webpackChunkName: "website" */ './views/website/Publications') },
       { path: 'resources', component: () => import(/* webpackChunkName: "website" */ './views/website/Resources') },
-      { path: 'shop', component: () => import(/* webpackChunkName: "website" */ './views/website/Shop') },
+      { path: 'company', component: () => import(/* webpackChunkName: "website" */ './views/website/Company') },
       { path: 'contact', component: () => import(/* webpackChunkName: "website" */ './views/website/Contact') },
-      { path: 'learnmore', component: () => import(/* webpackChunkName: "website" */ './views/website/LearnMore') }
+      { path: 'learnmore', component: () => import(/* webpackChunkName: "website" */ './views/website/LearnMore') },
+      { path: 'government', component: () => import(/* webpackChunkName: "website" */ './views/website/Government') },
+      { path: 'investors', component: () => import(/* webpackChunkName: "website" */ './views/website/Investors') }
     ]
   },
   {

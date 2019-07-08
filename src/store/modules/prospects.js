@@ -1,5 +1,3 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
 import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
@@ -10,7 +8,7 @@ Vue.use(VueAxios, axios)
 
 export default {
   state: {
-    prospects:  [],
+    prospects: [],
     processing: false
   },
   getters: {
@@ -35,8 +33,8 @@ export default {
       state.loginError = null
     },
     setProspects (state, payload) {
-        state.prospects = payload,
-        state.processing = false
+      state.prospects = payload
+      state.processing = false
     }
   },
   actions: {
@@ -49,12 +47,12 @@ export default {
         })
     },
     getProspects ({ commit }) {
-        commit('clearError')
-        Vue.axios.get('http://localhost:3000/api/prospects/all')
-            .then((response) => {
-                console.log("GOT ALL THE PROSPECTS: ", response.data)
-                commit('setProspects', response.data.data)
-            })
+      commit('clearError')
+      Vue.axios.get('http://localhost:3000/api/prospects/all')
+        .then((response) => {
+          console.log('GOT ALL THE PROSPECTS: ', response.data)
+          commit('setProspects', response.data.data)
+        })
     }
   }
 }

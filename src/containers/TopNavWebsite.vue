@@ -1,37 +1,39 @@
 <template>
     <nav class="navbar fixed-top" v-scroll="handleScroll">
-        <router-link class="navbar-logo" tag="a" to="#">
+        <router-link class="navbar-logo" tag="a" to="home">
             <span class="logo d-none d-xs-block"></span>
             <span class="logo-mobile d-block d-xs-none"></span>
         </router-link>
         <div class="ml-auto">
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn primary btn-sm mb-0 mr-0" target="_top" :href="homeUrl">{{$t('website.company')}}</a>
+                <router-link tag="a" to="company">
+                  <span class="btn primary btn-sm mb-0 mr-0" target="_top">{{$t('website.company')}}</span>
+                </router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <b-dropdown id="ddown1" :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.problem')}}</a></b-dropdown-item>
-                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.solution')}}</a></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goToLearnMore"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
+                    <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.tech[1]')}}</a></b-dropdown-item>
                     <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a></b-dropdown-item>
                 </b-dropdown>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn primary btn-sm mb-0 mr-0" target="_top" :href="homeUrl">{{$t('website.government')}}</a>
+                <router-link class="btn primary btn-sm mb-0 mr-0" tag="a" to="government"><span>{{$t('website.government')}}</span></router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-sm mb-0 mr-0" target="_top" :href="shopUrl">{{$t('website.investors')}}</a>
+                <router-link tag="a" to="investors"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.investors')}}</a></router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <a class="btn btn-sm mb-0 mr-0" target="_top" :href="contactUrl">{{$t('website.contact')}}</a>
+                <router-link tag="a" to="contact"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.contact')}}</a></router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right" id="login_button" v-if="0">
@@ -80,6 +82,9 @@ export default {
   methods: {
     ...mapMutations(['changeSideMenuStatus', 'changeSideMenuForMobile']),
     ...mapActions(['setLang', 'signOut']),
+    goToLearnMore () {
+      this.$router.push('learnmore')
+    },
     search () {
       this.$router.push(`${this.searchPath}?search=${this.searchKeyword}`)
       this.searchKeyword = ''

@@ -80,7 +80,7 @@ export default {
     }
   },
   computed: {
-      ...mapGetters(['prospects'])
+    ...mapGetters(['prospects'])
   },
   methods: {
     ...mapActions(['getProspects']),
