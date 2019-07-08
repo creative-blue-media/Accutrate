@@ -144,7 +144,6 @@ export default {
       email: '',
       password: '',
       prospect: {
-        name: '',
         firstname: '',
         lastname: '',
         company: '',
@@ -154,12 +153,15 @@ export default {
   },
   computed: {
     name: {
-      // get: function () {
-      //   return this.prospect.firstname + ' ' + this.prospect.lastname
-      // },
+      get: function () {
+        if (this.prospect.firstname && this.prospect.lastname) {
+          return this.prospect.firstname + ' ' + this.prospect.lastname
+        } else {
+          return this.prospect.firstname || this.prospect.lastname
+        }
+      },
       set: function (newFullName) {
         const names = newFullName.split(' ')
-
         if (names.length === 2) {
           this.prospect.firstname = names[0]
           this.prospect.lastname = names[1]
@@ -167,13 +169,6 @@ export default {
         if (names.length <= 1) {
           this.prospect.firstname = names[0] || ''
           this.prospect.lastname = ''
-        }
-      }
-    },
-    lastname: {
-      set: function (lm) {
-        if (this.hasFirstName()) {
-          this.name = this.prospect.firstname + this.prospect.lastname
         }
       }
     },
@@ -186,9 +181,6 @@ export default {
       // this.email = 'demo@gogo.com'
       // this.password = 'gogo123'
       this.login({ email: this.email, password: this.password })
-    },
-
-    hasFirstName () {
     }
   },
   watch: {
