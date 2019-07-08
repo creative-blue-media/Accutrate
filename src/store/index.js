@@ -7,6 +7,7 @@ import user from './modules/user'
 import chat from './modules/chat'
 import todo from './modules/todo'
 import survey from './modules/survey'
+import prospects from './modules/prospects'
 
 Vue.use(Vuex)
 
@@ -31,6 +32,7 @@ export const store = new Vuex.Store({
     user,
     chat,
     todo,
-    survey
+    survey,
+    prospects
   }
 })

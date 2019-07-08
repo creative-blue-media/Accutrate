@@ -12,7 +12,7 @@
     </b-colxx>
      <b-colxx xxs="12">
       <b-card class="mb-4" :title="$t('crm.prospects')">
-        <b-table hover :items="items" />
+        <b-table hover :items="prospects" />
       </b-card>
     </b-colxx>
   </b-row>
@@ -21,12 +21,13 @@
 <script>
 import { apiUrl } from '@/constants/config'
 import axios from 'axios'
-import Vuetable from 'vuetable-2/src/components/Vuetable'
+import { mapGetters, mapActions } from 'vuex'
+// import Vuetable from 'vuetable-2/src/components/Vuetable'
 // import VuetablePaginationBootstrap from '@/components/Common/VuetablePaginationBootstrap'
 
 export default {
   components: {
-    Vuetable
+    // Vuetable
     // VuetablePaginationBootstrap
   },
   data () {
@@ -78,7 +79,11 @@ export default {
       }
     }
   },
+  computed: {
+      ...mapGetters(['prospects'])
+  },
   methods: {
+    ...mapActions(['getProspects']),
     onPaginationData (paginationData) {
       this.$refs.pagination.setPaginationData(paginationData)
     },
@@ -120,6 +125,9 @@ export default {
       }
       return apiParams
     }
+  },
+  mounted () {
+    this.getProspects()
   }
 }
 </script>
