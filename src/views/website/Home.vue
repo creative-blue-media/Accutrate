@@ -54,10 +54,10 @@
     <b-container class="publications-section" fluid>
       <b-container class="publications">
         <b-row class="home-pad">
-          <b-row style="padding-bottom: 2vh;">
+          <b-row style="padding-bottom: 2vh; width: 100%;">
             <!-- <b-col md=12> -->
-              <b-container fluid>
-                <b-row style="width: 80vw;">
+              <b-container>
+                <b-row>
                   <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
                     <h1 style="margin: 0; color: #fff; border-bottom: 0px; text-align: center; padding: 15px;"><strong>The Problem</strong></h1>
                   </b-col>
@@ -66,7 +66,7 @@
                     <hr>
                   </b-col>
                 </b-row>
-                <b-row style="width: 80vw;">
+                <b-row>
                   <b-col md=6 style="height: 40vh; background: #fff;">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
