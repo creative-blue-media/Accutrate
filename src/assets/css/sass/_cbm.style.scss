@@ -77,7 +77,7 @@ $menu-collapse-time: 300ms;
 $animation-time-long: 1000ms;
 $animation-time-short: 200ms;
 
-$border-radius: 0.1rem;
+$border-radius: none;
 
 $theme-color-purple: #922c88;
 $theme-color-blue: #145388;
@@ -655,7 +655,7 @@ button {
 }
 
 .btn {
-  border-radius: 50px;
+  border-radius: none;
   outline: initial !important;
   box-shadow: none !important;
   box-shadow: initial !important;
@@ -682,11 +682,11 @@ button {
 .btn-lg,
 .btn-group-lg > .btn,
 .btn-group-sm > .btn {
-  border-radius: 50px;
+  // border-radius: 50px;
 }
 
 .btn.default {
-  border-radius: $border-radius;
+  // border-radius: $border-radius;
 }
 
 .btn-primary {
@@ -4516,7 +4516,7 @@ input:-webkit-autofill {
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
 .input-group-sm > .input-group-append > .btn {
-  border-radius: $border-radius;
+  // border-radius: $border-radius;
 }
 
 .form-control-lg,
@@ -4525,7 +4525,7 @@ input:-webkit-autofill {
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
 .input-group-lg > .input-group-append > .btn {
-  border-radius: $border-radius;
+  // border-radius: $border-radius;
 }
 
 .custom-select {
