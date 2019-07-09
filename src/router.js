@@ -103,6 +103,14 @@ const routes = [
       { path: 'investors', component: () => import(/* webpackChunkName: "website" */ './views/website/Investors') }
     ]
   },
+  { path: '/website/technology',
+    component: () => import(/* webpackChunkName: "website" */ './views/website/technology'),
+    redirect: 'website/technology/patient',
+    children: [
+      { path: 'patient', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Patient') },
+      { path: 'clinician', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Clinician') },
+    ]
+  },
   {
     path: '/features',
     component: () => import(/* webpackChunkName: "features" */ './views/features/Features'),

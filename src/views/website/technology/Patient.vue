@@ -3,29 +3,23 @@
     <b-container class="home-header" fluid>
       <b-container class="h-header">
         <b-row class="home-pad" style="z-index: 999;">
-          <b-col class="header-text" xs=12 md=12 style="text-align: center;">
-            <h1 style="font-size: 4em;"><strong>Who We Are</strong></h1>
+          <b-col class="header-text" xs=12 md=6>
+            <h5>Better Breathing for Life</h5>
+            <h1 style="font-size: 4em;"><strong>Wearable pulse-oximetry enabled biosensor</strong></h1>
             <h5>Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
             <br>
-            <!-- <router-link tag="a" to="learnmore">
+            <router-link tag="a" to="learnmore">
               <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
-            </router-link> -->
+            </router-link>
           </b-col>
-          <div class="col-md-12 who-we-are" style="background: url('elderly_scaled.png')">
-          </div>
-          <div class="box col-md-12">
-            <h5>At ResMed (NYSE: RMD, ASX: RMD) we pioneer innovative solutions that treat and keep people out of the hospital, 
-              empowering them to live healthier, higher-quality lives. Our cloud-connected medical devices transform care for people with sleep apnea, 
-              COPD and other chronic diseases. Our comprehensive out-of-hospital software platforms support the professionals and caregivers who help people stay healthy in the home or care setting of their choice. 
-              By enabling better care, we improve quality of life, reduce the impact of chronic disease and lower costs for consumers and healthcare systems in more than 120 countries. 
-              To learn more, visit ResMed.com and follow @ResMed.</h5>
-            <!-- <b-card sm="6" class="header-form mb-4">
+          <div class="box col-md-6">
+            <b-card sm="6" class="header-form mb-4">
                 <b-form class="mb-12">
                   <b-row>
                     <h2 style="padding:10px;">Get More Information</h2>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.firstname" />
+                        <b-form-input type="text" v-model="prospect.firstname" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
                         <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -42,9 +36,9 @@
                       </b-form-group>
                     </b-col>
                   </b-row>
-                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button> 
+                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
                 </b-form>
-              </b-card> -->
+              </b-card>
           </div>
         </b-row>
       </b-container>
