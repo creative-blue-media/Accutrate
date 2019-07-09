@@ -552,7 +552,8 @@
     "solution": "OUR SOLUTION",
     "government": "GOVERNENCE",
     "investors": "INVESTORS",
-    "tech": ["FOR PATIENTS", "FOR CLINICIANS"]
+    "tech": ["FOR PATIENTS", "FOR CLINICIANS"],
+    "GOVERNENCE": ["MANAGEMENT", "BOARD OF DIRECTORS", "COMMITTEES & CHARTERS", "CORPORATE GOVERNANCE DOCUMENTS"]
   },
   "crm": {
     "prospects": "PROSPECTS"
