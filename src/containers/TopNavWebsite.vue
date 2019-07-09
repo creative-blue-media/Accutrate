@@ -7,7 +7,7 @@
         <div class="ml-auto">
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <router-link tag="a" to="company">
+                <router-link tag="a" to="/website/company">
                   <span class="btn primary btn-sm mb-0 mr-0" target="_top">{{$t('website.company')}}</span>
                 </router-link>
                 </div>
@@ -15,36 +15,37 @@
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <b-dropdown id="ddown1" hoverable :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
-                    <b-dropdown-item @click.prevent="goTo('LearnMore')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('Publications')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[1]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('Resources')"><span class="center mb-0 mr-0" target="_top">{{$t('website.resources')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/technology/Patient')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/technology/Clinician')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[1]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/Resources')"><span class="center mb-0 mr-0" target="_top">{{$t('website.resources')}}</span></b-dropdown-item>
                 </b-dropdown>
                 </div>
             </div>
 
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <b-dropdown id="ddown1" hoverable :text="'GOVERN2 '" class="mb-0 mr-0" variant="outline">
-                    <b-dropdown-item @click.prevent="goTo('LearnMore')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('Publications')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[1]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('Resources')"><span class="center mb-0 mr-0" target="_top">{{$t('website.resources')}}</span></b-dropdown-item>
+                <b-dropdown id="ddown1" hoverable :text="'GOVERNENCE (New) '" class="mb-0 mr-0" variant="outline">
+                    <b-dropdown-item @click.prevent="goTo('/website/governence/Management')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[0]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/governence/Board')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[1]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/governence/Committees')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[2]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/governence/Documents')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[3]')}}</span></b-dropdown-item>
                 </b-dropdown>
                 </div>
             </div>
 
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <router-link class="btn primary btn-sm mb-0 mr-0" tag="a" to="government"><span>{{$t('website.government')}}</span></router-link>
+                <router-link class="btn primary btn-sm mb-0 mr-0" tag="a" to="/website/government"><span>{{$t('website.government')}}</span></router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <router-link tag="a" to="investors"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.investors')}}</a></router-link>
+                <router-link tag="a" to="/website/investors"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.investors')}}</a></router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <router-link tag="a" to="contact"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.contact')}}</a></router-link>
+                <router-link tag="a" to="/website/contact"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.contact')}}</a></router-link>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right" id="login_button" v-if="0">
