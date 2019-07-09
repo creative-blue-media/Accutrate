@@ -14,7 +14,7 @@
             </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <b-dropdown id="ddown1" :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
+                <b-dropdown id="ddown1" hoverable :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
                     <b-dropdown-item @click.prevent="goToLearnMore"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
                     <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="publicationsUrl">{{$t('website.tech[1]')}}</a></b-dropdown-item>
                     <b-dropdown-item><a class="center mb-0 mr-0" target="_top" :href="resourcesUrl">{{$t('website.resources')}}</a></b-dropdown-item>

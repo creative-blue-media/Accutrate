@@ -550,9 +550,9 @@
     "learnmore": "LEARN MORE",
     "problem": "THE PROBLEM",
     "solution": "OUR SOLUTION",
-    "government": "GOVERNMENT",
+    "government": "GOVERNENCE",
     "investors": "INVESTORS",
-    "tech": ["ACCUSENSOR", "ACCUTITRATOR"]
+    "tech": ["FOR PATIENTS", "FOR CLINICIANS"]
   },
   "crm": {
     "prospects": "PROSPECTS"
