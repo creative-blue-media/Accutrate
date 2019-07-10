@@ -11,8 +11,6 @@
               <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
             </router-link> -->
           </b-col>
-          <div class="col-md-12 who-we-are" style="background: url('elderly_scaled.png')">
-          </div>
           <div class="box col-md-12">
             <h5>At Accutrate, we pioneer innovative solutions that utilize analytics to optimize health resource usage, 
               empowering individuals to live healthier, higher-quality lives. Our cloud-connected health devices transform care for people with pulminary fibrosis, people who use POC.... Our comprehensive out-of-hospital software platforms support the professionals and caregivers who help people stay healthy in the home or care setting of their choice. 
@@ -47,6 +45,8 @@
           </div>
         </b-row>
       </b-container>
+      <div class="col-md-12 who-we-are" style="background: url('/assets/img/elderly.jpg'); height: 100vh;">
+      </div>
       <div class="container-fluid curveSVG">
         <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -61,7 +61,7 @@
         <b-row class="home-pad">
           <b-row style="padding-bottom: 2vh; width: 100%;">
             <!-- <b-col md=12> -->
-              <b-container>
+              <b-container style="opacity: .5;">
                 <b-row>
                   <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
                     <h1 style="margin: 0; color: #fff; border-bottom: 0px; text-align: center; padding: 15px;"><strong>The Problem</strong></h1>

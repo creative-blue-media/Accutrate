@@ -17,6 +17,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: white; 
+    border-radius: 20px;
     //background: url($curveSVG) ;
     //clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%);
     
@@ -41,6 +42,10 @@
         padding-bottom: 2px;
     }
     // this isn't working ...
+}
+
+.root-home {
+    background: #f8f8f8;
 }
 #ddown1__BV_toggle_ {
     background-color: rgba(255, 255, 255, 0);
