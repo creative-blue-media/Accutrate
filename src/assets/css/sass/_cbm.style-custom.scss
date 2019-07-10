@@ -60,10 +60,25 @@
     }
 
     #company-header {
-        animation: moveInBottom 1s ease-out;
+        animation: moveInRightRotate 1s ease-out;
     }
     .company-text-body {
-        animation: fadeIn 2s ease-out;
+        animation: moveInBottom 1s ease-out;
+    }
+}
+
+@keyframes moveInRightRotate {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    50% {
+        transform: translateX(40px) rotate(120deg);
+    }
+    100% {
+        opacity: 1; 
+        transform: translate(0);
     }
 }
 
