@@ -47,14 +47,13 @@
       </b-container>
       <div class="col-md-12 who-we-are" style="background: url('/assets/img/elderly.jpg'); height: 100vh;">
       </div>
-      <div class="container-fluid curveSVG">
-        <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <!-- <div class="container-fluid curveSVG">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 2000 1117" style="enable-background:new 0 0 2000 1117;" xml:space="preserve">
         <title>SVGArtboard 3</title>
         <path style="fill:#F5F9FD;" d="M0,1116.78c0,0,1360.42-586.57,2000-576.56l-0.42,576.78L0,1116.78z"/>
         </svg>
-      </div>
+      </div> -->
     </b-container>
     <b-container class="publications-section" fluid>
       <b-container class="publications">
