@@ -60,22 +60,42 @@
         <b-row class="home-pad">
           <b-row style="padding-bottom: 2vh; width: 100%;">
             <!-- <b-col md=12> -->
-              <b-container style="opacity: .5;">
+              <b-container>
                 <b-row>
-                  <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
+                  <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, rgba(119, 178, 230, .3), #304772);">
                     <h1 style="margin: 0; color: #fff; border-bottom: 0px; text-align: center; padding: 15px;"><strong>The Problem</strong></h1>
                   </b-col>
-                  <b-col xs=12 md=6 style="height: 40vh; background: #fff;">
+                  <b-col xs=12 md=6 style="height: 40vh; background: rgba(255, 255, 255, .5);">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
+                    <p style="color: #555;">There are many variations of passages of Lorem Ipsum available, 
+                      but the majority have suffered alteration in some form, by injected humour, 
+                      or randomised words which don't look even slightly believable. 
+                      If you are going to use a passage of Lorem Ipsum, 
+                      you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                      All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+                      making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, 
+                      combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+                      The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                      </p>
                   </b-col>
                 </b-row>
                 <b-row>
-                  <b-col md=6 style="height: 40vh; background: #fff;">
+                  <b-col md=6 style="height: 40vh; background: rgba(255, 255, 255, .5);">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
+                    <p style="color: #555;">There are many variations of passages of Lorem Ipsum available, 
+                      but the majority have suffered alteration in some form, by injected humour, 
+                      or randomised words which don't look even slightly believable. 
+                      If you are going to use a passage of Lorem Ipsum, 
+                      you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                      All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+                      making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, 
+                      combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+                      The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                      </p>
                   </b-col>
-                  <b-col md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
+                  <b-col md=6 style="height: 40vh; background: linear-gradient(to bottom right, rgba(119, 178, 230, .3), #304772);">
                     <h1 style="color: #fff; border-bottom: 0px; padding: 15px;"><strong>Our Solution</strong></h1>
                   </b-col>
                 </b-row>
