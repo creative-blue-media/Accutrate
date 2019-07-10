@@ -111,6 +111,16 @@ const routes = [
       { path: 'clinician', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Clinician') },
     ]
   },
+  { path: '/website/governence',
+    component: () => import(/* webpackChunkName: "website" */ './views/website/governence'),
+    redirect: 'website/governence/management',
+    children: [
+      { path: 'management', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Management') },
+      { path: 'board', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Board') },
+      { path: 'committees', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Committees') },
+      { path: 'documents', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Documents') }
+    ]
+  },
   {
     path: '/features',
     component: () => import(/* webpackChunkName: "features" */ './views/features/Features'),

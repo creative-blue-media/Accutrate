@@ -1,6 +1,6 @@
 <template>
     <nav class="navbar fixed-top" v-scroll="handleScroll">
-        <router-link class="navbar-logo" tag="a" to="home">
+        <router-link class="navbar-logo" tag="a" to="/website/home">
             <span class="logo d-none d-xs-block"></span>
             <span class="logo-mobile d-block d-xs-none"></span>
         </router-link>
