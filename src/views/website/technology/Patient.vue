@@ -3,43 +3,15 @@
     <b-container class="home-header" fluid>
       <b-container class="h-header">
         <b-row class="home-pad" style="z-index: 999;">
-          <b-col class="header-text" xs=12 md=6>
+          <b-col class="header-text" xs=12 md=12>
             <h5>Better Breathing for Life</h5>
-            <h1 style="font-size: 4em;"><strong>Wearable pulse-oximetry enabled biosensor</strong></h1>
+            <h1 style="font-size: 4em;"><strong>Live at ease knowing that your wearable pulse-oximetry enabled biosensor is getting the most for your needs</strong></h1>
             <h5>Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
             <br>
             <router-link tag="a" to="learnmore">
               <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
             </router-link>
           </b-col>
-          <div class="box col-md-6">
-            <b-card sm="6" class="header-form mb-4">
-                <b-form class="mb-12">
-                  <b-row>
-                    <h2 style="padding:10px;">Get More Information</h2>
-                    <b-col sm="12">
-                      <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.firstname" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
-                        <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group :label="$t('forms.lastname')">
-                        <b-form-input type="text" v-model="prospect.lastname"/>
-                        <b-form-invalid-feedback>{{ $t('forms.lastname-message')}}</b-form-invalid-feedback>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group :label="$t('forms.email')">
-                        <b-form-input type="text" v-model="prospect.email"/>
-                        <b-form-invalid-feedback>{{ $t('forms.email-message')}}</b-form-invalid-feedback>
-                      </b-form-group>
-                    </b-col>
-                  </b-row>
-                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
-                </b-form>
-              </b-card>
-          </div>
         </b-row>
       </b-container>
       <!-- <div class="container-fluid curveSVG">
