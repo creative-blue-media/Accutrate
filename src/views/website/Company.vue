@@ -4,15 +4,15 @@
       <b-container class="h-header">
         <b-row class="home-pad" style="z-index: 999;">
           <b-col class="header-text" xs=12 md=12 style="text-align: center;">
-            <h1 style="font-size: 4em;"><strong>Who We Are</strong></h1>
-            <h5>Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
+            <h1 id="company-header" style="font-size: 4em;"><strong>Who We Are</strong></h1>
+            <h5 class="company-text-body">Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
             <br>
             <!-- <router-link tag="a" to="learnmore">
               <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
             </router-link> -->
           </b-col>
-          <div class="box col-md-12">
-            <h5>At Accutrate, we pioneer innovative solutions that utilize analytics to optimize health resource usage, 
+          <div class="box col-md-12 header-text">
+            <h5 class="company-text-body">At Accutrate, we pioneer innovative solutions that utilize analytics to optimize health resource usage, 
               empowering individuals to live healthier, higher-quality lives. Our cloud-connected health devices transform care for people with pulminary fibrosis, people who use POC.... Our comprehensive out-of-hospital software platforms support the professionals and caregivers who help people stay healthy in the home or care setting of their choice. 
               By enabling better data and transparency, we improve quality of life, reduce the impact of chronic disease and lower costs for consumers and healthcare systems .... 
               To learn more, ...</h5>
