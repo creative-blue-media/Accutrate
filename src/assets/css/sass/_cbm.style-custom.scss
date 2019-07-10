@@ -26,12 +26,10 @@
     @include respond-below(xl) {
         padding-top: $navbar-height-lg;
     }
-
     @include respond-below(lg) {
         padding-top: $navbar-height-md;
         // padding: 1.5rem $main-margin-md 1.5rem 0;
     }
-
     @include respond-below(sm) {
         padding-top: $navbar-height-xs;
         // padding: $main-margin-xs;
@@ -53,10 +51,30 @@
 .h-header {
     position: relative;
 }
+
 .header-text {
     margin:0;
     vertical-align: middle;
+    h1 {
+        animation: moveInLeft 1s ease-out;
+    }
 }
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
 .header-form {
     width:40vh;
     float:right;
