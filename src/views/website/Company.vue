@@ -14,11 +14,10 @@
           <div class="col-md-12 who-we-are" style="background: url('elderly_scaled.png')">
           </div>
           <div class="box col-md-12">
-            <h5>At ResMed (NYSE: RMD, ASX: RMD) we pioneer innovative solutions that treat and keep people out of the hospital, 
-              empowering them to live healthier, higher-quality lives. Our cloud-connected medical devices transform care for people with sleep apnea, 
-              COPD and other chronic diseases. Our comprehensive out-of-hospital software platforms support the professionals and caregivers who help people stay healthy in the home or care setting of their choice. 
-              By enabling better care, we improve quality of life, reduce the impact of chronic disease and lower costs for consumers and healthcare systems in more than 120 countries. 
-              To learn more, visit ResMed.com and follow @ResMed.</h5>
+            <h5>At Accutrate, we pioneer innovative solutions that utilize analytics to optimize health resource usage, 
+              empowering individuals to live healthier, higher-quality lives. Our cloud-connected health devices transform care for people with pulminary fibrosis, people who use POC.... Our comprehensive out-of-hospital software platforms support the professionals and caregivers who help people stay healthy in the home or care setting of their choice. 
+              By enabling better data and transparency, we improve quality of life, reduce the impact of chronic disease and lower costs for consumers and healthcare systems .... 
+              To learn more, ...</h5>
             <!-- <b-card sm="6" class="header-form mb-4">
                 <b-form class="mb-12">
                   <b-row>
