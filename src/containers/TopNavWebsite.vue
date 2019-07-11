@@ -7,9 +7,11 @@
         <div class="ml-auto">
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <router-link tag="a" to="/website/company">
-                  <span class="btn primary btn-sm mb-0 mr-0" target="_top">{{$t('website.company')}}</span>
-                </router-link>
+                  <b-dropdown id="ddown1" hoverable :text="'ABOUT US'" class="mb-0 mr-0" variant="outline">
+                    <b-dropdown-item @click.prevent="goTo('/website/company')"><span class="center mb-0 mr-0" target="_top">{{$t('website.company')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/technology/Clinician')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[1]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/Resources')"><span class="center mb-0 mr-0" target="_top">{{$t('website.resources')}}</span></b-dropdown-item>
+                </b-dropdown>
                 </div>
             </div>
             <div class="header-icons d-inline-block align-right">
