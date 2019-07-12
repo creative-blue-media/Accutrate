@@ -37,7 +37,8 @@ const routes = [
           { path: 'mailing', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Mailing') },
           { path: 'invoice', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Invoice') },
           { path: 'news', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/News') },
-          { path: 'prospects', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospects') }
+          { path: 'prospects', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospects') },
+          { path: 'prospect/:id', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospect') }
         ]
       },
       {

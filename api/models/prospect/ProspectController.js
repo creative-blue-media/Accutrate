@@ -37,25 +37,11 @@ module.exports = function (app, express) {
     });
 
     ProspectApi.get("/all", function (req, res) {
-        console.log("Get Prospect Called?")
         // console.log(req.body);
 
         Prospect.find().sort('-date').exec(function (err, prospects) {
             if (err) console.log(err);
-            console.log(prospects);
             res.status(200).send({
-                "links": {
-                    "pagination": {
-                      "total": 50,
-                      "per_page": 15,
-                      "current_page": 1,
-                      "last_page": 4,
-                      "next_page_url": "...",
-                      "prev_page_url": "...",
-                      "from": 1,
-                      "to": 15,
-                    }
-                },
                 "data": prospects
                
             })

@@ -14,7 +14,7 @@
       <b-card class="mb-4" :title="$t('crm.prospects')">
         <b-table hover :items="itemss">
           <template slot="_id" slot-scope="data">
-          <a :href="'/prospect/' + data.value">{{data.value}}</a>
+          <a :href="'/app/pages/prospect/'+data.value">{{data.value}}</a>
           </template>
         </b-table>
       </b-card>
