@@ -5,8 +5,8 @@
         <b-row class="home-pad" style="z-index: 999;">
           <b-col class="header-text" xs=12 md=6>
             <h5>Better Breathing for Life</h5>
-            <h1 style="font-size: 4em;"><strong>Wearable pulse-oximetry enabled biosensor</strong></h1>
-            <h5>Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
+            <h1 style="font-size: 4em;"><strong>Investors</strong></h1>
+            <h5>3 clinical trials</h5>
             <br>
             <router-link tag="a" to="learnmore">
               <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>

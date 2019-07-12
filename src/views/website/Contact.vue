@@ -5,12 +5,7 @@
         <b-row class="home-pad" style="z-index: 999;">
           <b-col class="header-text" xs=12 md=6>
             <h5>Better Breathing for Life</h5>
-            <h1 style="font-size: 4em;"><strong>Wearable pulse-oximetry enabled biosensor</strong></h1>
-            <h5>Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
-            <br>
-            <router-link tag="a" to="learnmore">
-              <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
-            </router-link>
+            <h1 style="font-size: 4em;"><strong>Contact us at ...</strong></h1>
           </b-col>
           <div class="box col-md-6">
             <b-card sm="6" class="header-form mb-4">
