@@ -12,7 +12,11 @@
     </b-colxx>
      <b-colxx xxs="12">
       <b-card class="mb-4" :title="$t('crm.prospects')">
-        <b-table hover :items="prospects" />
+        <b-table hover :items="itemss">
+          <template slot="_id" slot-scope="data">
+          <a :href="'/prospect/' + data.value">{{data.value}}</a>
+          </template>
+        </b-table>
       </b-card>
     </b-colxx>
   </b-row>
@@ -41,9 +45,9 @@ export default {
         apiUrl: 'http://localhost:3000/api/prospects/all', // apiUrl + '/cakes/fordatatable',
         fields: [
           {
-            name: 'title',
-            sortField: 'title',
-            title: 'Name',
+            key: '_id',
+            label: 'ID',
+            formatter: 'Name',
             titleClass: '',
             dataClass: 'list-item-heading'
           },
@@ -80,7 +84,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['prospects'])
+    ...mapGetters(['prospects']),
+    itemss: function() {
+      return this.prospects
+    }
   },
   methods: {
     ...mapActions(['getProspects']),
