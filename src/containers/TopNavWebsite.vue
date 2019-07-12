@@ -33,12 +33,6 @@
                 </b-dropdown>
                 </div>
             </div>
-
-            <div class="header-icons d-inline-block align-right">
-                <div class="position-relative d-none d-none d-lg-inline-block">
-                <router-link class="btn primary btn-sm mb-0 mr-0" tag="a" to="/website/government"><span>{{$t('website.government')}}</span></router-link>
-                </div>
-            </div>
             <div class="header-icons d-inline-block align-right">
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <router-link tag="a" to="/website/investors"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.investors')}}</a></router-link>
