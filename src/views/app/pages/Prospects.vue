@@ -12,7 +12,7 @@
     </b-colxx>
      <b-colxx xxs="12">
       <b-card class="mb-4" :title="$t('crm.prospects')">
-        <b-table hover :items="itemss">
+        <b-table hover :items="prospects">
           <template slot="_id" slot-scope="data">
           <a :href="'/app/pages/prospect/'+data.value">{{data.value}}</a>
           </template>
