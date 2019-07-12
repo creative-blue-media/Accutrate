@@ -18,6 +18,9 @@
                 <b-dropdown id="ddown1" hoverable :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
                     <b-dropdown-item @click.prevent="goTo('/website/technology/patient')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
                     <b-dropdown-item @click.prevent="goTo('/website/technology/clinician')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[1]')}}</span></b-dropdown-item>
+                    <b-dropdown-divider/>
+                    <b-dropdown-item @click.prevent="goTo('/website/technology/patient')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[2]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/technology/clinician')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[3]')}}</span></b-dropdown-item>
                     <b-dropdown-item @click.prevent="goTo('/website/resources')"><span class="center mb-0 mr-0" target="_top">{{$t('website.resources')}}</span></b-dropdown-item>
                 </b-dropdown>
                 </div>

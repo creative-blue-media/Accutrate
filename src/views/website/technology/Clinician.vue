@@ -55,7 +55,6 @@
       <b-container class="publications">
         <b-row class="home-pad">
           <!-- <b-row style="padding-bottom: 2vh; width: 100%;">
-          
               <b-container>
                 <b-row>
                   <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
@@ -76,7 +75,6 @@
                   </b-col>
                 </b-row>
               </b-container>
-            
           </b-row> -->
         </b-row>
       </b-container>
@@ -89,7 +87,7 @@
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.
-              Cras porta aliquet erat condimentum pulvinar. 
+              Cras porta aliquet erat condimentum pulvinar.
               Nullam congue arcu ac turpis pretium venenatis
               elementum sit amet libero. Morbi eleifend suscipit
               velit luctus placerat. Quisque mattis neque sit amet

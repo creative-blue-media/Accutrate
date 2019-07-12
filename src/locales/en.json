@@ -552,7 +552,7 @@
     "solution": "OUR SOLUTION",
     "government": "GOVERNENCE",
     "investors": "INVESTORS",
-    "tech": ["FOR PATIENTS", "FOR CLINICIANS"],
+    "tech": ["AccuSensor", "AccuTitrator", "Patients", "Clinicians"],
     "governence": ["MANAGEMENT", "BOARD OF DIRECTORS", "COMMITTEES & CHARTERS", "CORPORATE GOVERNANCE DOCUMENTS"]
   },
   "crm": {

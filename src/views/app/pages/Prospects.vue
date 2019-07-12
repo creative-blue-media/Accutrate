@@ -84,10 +84,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['prospects']),
-    itemss: function() {
-      return this.prospects
-    }
+    ...mapGetters(['prospects'])
   },
   methods: {
     ...mapActions(['getProspects']),

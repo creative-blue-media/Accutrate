@@ -109,7 +109,7 @@ const routes = [
     redirect: 'website/technology/patient',
     children: [
       { path: 'patient', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Patient') },
-      { path: 'clinician', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Clinician') },
+      { path: 'clinician', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Clinician') }
     ]
   },
   { path: '/website/governence',
