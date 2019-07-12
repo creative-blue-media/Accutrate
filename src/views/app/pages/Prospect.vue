@@ -3,19 +3,28 @@
     <b-container class="" fluid>
       <b-container class="">
         <b-card class="mb-4" :title="'Your Prospect'" >
-            <b-input-group prepend="@" class="mb-3">
-                <b-form-input :placeholder="$t('user.username')"></b-form-input>
+            <b-input-group class="mb-3">
+                <b-form-input :placeholder="'Name'"></b-form-input>
             </b-input-group>
-            <b-input-group append="@example" class="mb-3">
-                <b-form-input :placeholder="$t('user.username')"></b-form-input>
+            <b-input-group class="mb-3">
+                <b-form-input :placeholder="'Email'"></b-form-input>
             </b-input-group>
-            <b-input-group prepend="https://example.com/users/" class="mb-3">
-                <b-form-input :placeholder="$t('user.username')"></b-form-input>
+            <b-input-group prepend="https://example.com/" class="mb-3">
+                <b-form-input :placeholder="'Website'"></b-form-input>
             </b-input-group>
-            <b-input-group prepend="$" append=".00" class="mb-3">
+            <b-input-group prepend="Phone" class="mb-3">
+                <b-form-input :placeholder="'Phone Number'"></b-form-input>
+            </b-input-group>
+            <b-form-group :label="'Contacted?'">
+            <b-form-checkbox-group>
+              <b-form-checkbox value="first">Yes</b-form-checkbox>
+              <b-form-checkbox value="second">No</b-form-checkbox>
+            </b-form-checkbox-group>
+          </b-form-group>
+            <b-input-group prepend="Contribution $" append=".00" class="mb-3">
                 <b-form-input type="number"></b-form-input>
             </b-input-group>
-              <b-input-group prepend="With textarea" class="mb-3">
+              <b-input-group prepend="Notes" class="mb-3">
                 <b-form-textarea rows="2" max-rows="6" v-model="textarea" no-resize></b-form-textarea>
             </b-input-group>
         </b-card>
