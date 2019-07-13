@@ -27,7 +27,7 @@
              <vue-perfect-scrollbar class="scroll " :settings="{ suppressScrollX: true, wheelPropagation: false }" >
                 <ul class="list-unstyled" data-link="dashboards" v-bind:class="[(selectedParentMenu==='dashboards' || selectedParentMenu==='settings' || selectedParentMenu==='pages') ? 'd-block' :'']">
                     <router-link tag="li" to="#"><span  class="name mr-1"> Hi, {{currentUser.firstname}} {{currentUser.lastname}}!</span></router-link>
-                    <router-link tag="li" to="/app/dashboards/patient"><a><i class="simple-icon-briefcase"></i> {{ 'Profile' }}</a></router-link>
+                    <router-link tag="li" to="/app/pages/profile"><a><i class="simple-icon-briefcase"></i> {{ 'Profile' }}</a></router-link>
                     <router-link tag="li" to="/app/settings"><a><i class="simple-icon-pie-chart"></i> {{ 'Settings' }}</a></router-link>
                     <router-link tag="li" to="/app/pages/prospects"><a><i class="simple-icon-pie-chart"></i> {{ 'Prospects' }}</a></router-link>
                     <router-link tag="li" to="/app/pages/news"><a><i class="simple-icon-pie-chart"></i> {{ 'News' }}</a></router-link>

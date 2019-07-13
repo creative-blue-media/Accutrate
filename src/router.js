@@ -14,14 +14,14 @@ const routes = [
       {
         path: 'app/dashboards',
         component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards'),
-        redirect: '/app/dashboards/patient',
+        redirect: '/app/dashboards/employee',
         children: [
           { path: 'default', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Default') },
           { path: 'analytics', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Analytics') },
           { path: 'ecommerce', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Ecommerce') },
           { path: 'content', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Content') },
           { path: 'doctor', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Doctor') },
-          { path: 'patient', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Patient') }
+          { path: 'employee', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Employee') }
         ]
       },
       {
@@ -36,6 +36,7 @@ const routes = [
           { path: 'search', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Search') },
           { path: 'mailing', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Mailing') },
           { path: 'invoice', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Invoice') },
+          { path: 'profile', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Profile') },
           { path: 'news', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/News') },
           { path: 'prospects', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospects') },
           { path: 'prospect/:id', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospect') }

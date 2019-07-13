@@ -84,7 +84,10 @@
     "tables": "Tables",
     "maps": "Maps",
     "news": "News",
-    "employee": "Employee"
+    "employee": "Employee",
+    "settings": "Settings",
+    "profile": "Profile",
+    "prospects": "Prospects"
   },
 
   "dashboards": {
