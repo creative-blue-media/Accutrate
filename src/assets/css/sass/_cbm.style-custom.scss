@@ -17,7 +17,7 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: white; 
-    border-radius: 20px 20px 0px 0px;
+    // border-radius: 20px 20px 0px 0px;
     //background: url($curveSVG) ;
     //clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%);
     
@@ -158,12 +158,18 @@
 
 .publications-section {
     color: $theme-color-1;
-    background: #F5F9FD;
+    background:linear-gradient(to bottom left, #77B2E6,  #fff); // background: #F5F9FD;
     h1 {
         border-bottom: 2px $theme-color-1 solid;
         padding-bottom: 2px;
     }
 }
+
+.icon-cards-row > * > * {
+    background: #fff;
+    border-radius: 8px;
+}
+
 
 .shops-section {
     color: #fff;

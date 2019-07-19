@@ -54,10 +54,24 @@
     <b-container class="publications-section" fluid>
       <b-container class="publications">
         <b-row class="home-pad">
-          <b-row style="padding-bottom: 2vh; width: 100%;">
+          <b-row style="width: 100%;">
             <!-- <b-col md=12> -->
               <b-container>
-                <b-row>
+                <b-row class="icon-cards-row">
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Continuous')" icon="iconsminds-arrow-refresh" :value="''"/>
+                  </b-colxx>
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Conservative')" icon="iconsminds-basket-coins" :value="''" />
+                  </b-colxx>
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Reliable')" icon="simple-icon-energy" :value="''" />
+                  </b-colxx>
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Transparent')" icon="simple-icon-screen-desktop" :value="''" />
+                  </b-colxx>
+                </b-row>
+                <!-- <b-row>
                   <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
                     <h1 style="margin: 0; color: #fff; border-bottom: 0px; text-align: center; padding: 15px;"><strong>The Problem</strong></h1>
                   </b-col>
@@ -74,7 +88,7 @@
                   <b-col md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
                     <h1 style="color: #fff; border-bottom: 0px; padding: 15px;"><strong>Our Solution</strong></h1>
                   </b-col>
-                </b-row>
+                </b-row> -->
               </b-container>
             <!-- </b-col> -->
           </b-row>
@@ -135,6 +149,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import { learnmoreUrl } from '@/constants/config'
+import IconCard from '@/components/Cards/IconCard'
 
 export default {
   props: {
@@ -154,6 +169,9 @@ export default {
       },
       learnmoreUrl
     }
+  },
+  components: {
+    IconCard
   },
   computed: {
     name: {

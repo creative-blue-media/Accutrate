@@ -21,8 +21,7 @@
                 </b-dropdown>
                 </div>
             </div>
-
-            <div class="header-icons d-inline-block align-right">
+            <div class="header-icons d-inline-block align-right" v-if="0"> <!--Use v-if="0" instead of commenting out -->
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <b-dropdown id="ddown1" hoverable :text="'GOVERNENCE (New) '" class="mb-0 mr-0" variant="outline">
                     <b-dropdown-item @click.prevent="goTo('/website/governence/management')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[0]')}}</span></b-dropdown-item>
