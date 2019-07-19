@@ -99,7 +99,6 @@
       <b-container class="shops">
         <b-row class="home-pad">
           <b-col xs=12 md=4>
-            <h1><Strong>Shop</Strong></h1>
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.
@@ -109,7 +108,7 @@
               velit luctus placerat. Quisque mattis neque sit amet
               lectus ornare, vel sagittis nibh tempor.
             </p>
-            <b-button class="mb-1 button-home">{{ 'Buy Now' }}</b-button>
+            <b-button class="mb-1 button-home">{{ 'Explore' }}</b-button>
           </b-col>
           </b-row>
       </b-container>
