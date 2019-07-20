@@ -555,8 +555,9 @@
     "solution": "OUR SOLUTION",
     "government": "GOVERNENCE",
     "investors": "INVESTORS",
-    "tech": ["AccuSensor", "AccuTitrator", "Patients", "Clinicians"],
-    "governence": ["MANAGEMENT", "BOARD OF DIRECTORS", "COMMITTEES & CHARTERS", "CORPORATE GOVERNANCE DOCUMENTS"]
+    "tech": ["ACCUSENSOR", "ACCUTITRATOR", "INTELLECTUAL PROPERTY"],
+    "governence": ["MANAGEMENT", "BOARD OF DIRECTORS", "COMMITTEES & CHARTERS", "CORPORATE GOVERNANCE DOCUMENTS"],
+    "information": ["RESEARCH", "RESOURCES"]
   },
   "crm": {
     "prospects": "PROSPECTS"

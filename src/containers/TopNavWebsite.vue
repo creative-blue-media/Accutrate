@@ -18,20 +18,19 @@
                 <b-dropdown id="ddown1" hoverable :text="'TECHNOLOGY'" class="mb-0 mr-0" variant="outline">
                     <b-dropdown-item @click.prevent="goTo('/website/technology/accusensor')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[0]')}}</span></b-dropdown-item>
                     <b-dropdown-item @click.prevent="goTo('/website/technology/accutitrator')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[1]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/technology/intellectual-property')"><span class="center mb-0 mr-0" target="_top">{{$t('website.tech[2]')}}</span></b-dropdown-item>
                 </b-dropdown>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-right" v-if="0"> <!--Use v-if="0" instead of commenting out -->
+            <div class="header-icons d-inline-block align-right"> <!--Use v-if="0" instead of commenting out -->
                 <div class="position-relative d-none d-none d-lg-inline-block">
-                <b-dropdown id="ddown1" hoverable :text="'GOVERNENCE (New) '" class="mb-0 mr-0" variant="outline">
-                    <b-dropdown-item @click.prevent="goTo('/website/governence/management')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[0]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('/website/governence/board')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[1]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('/website/governence/committees')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[2]')}}</span></b-dropdown-item>
-                    <b-dropdown-item @click.prevent="goTo('/website/governence/documents')"><span class="center mb-0 mr-0" target="_top">{{$t('website.governence[3]')}}</span></b-dropdown-item>
+                <b-dropdown id="ddown1" hoverable :text="'INFORMATION'" class="mb-0 mr-0" variant="outline">
+                    <b-dropdown-item @click.prevent="goTo('/website/information/resources')"><span class="center mb-0 mr-0" target="_top">{{$t('website.information[0]')}}</span></b-dropdown-item>
+                    <b-dropdown-item @click.prevent="goTo('/website/information/research')"><span class="center mb-0 mr-0" target="_top">{{$t('website.information[1]')}}</span></b-dropdown-item>
                 </b-dropdown>
                 </div>
             </div>
-            <div class="header-icons d-inline-block align-right">
+            <div class="header-icons d-inline-block align-right" v-if="0">
                 <div class="position-relative d-none d-none d-lg-inline-block">
                 <router-link tag="a" to="/website/investors"><a class="btn btn-sm mb-0 mr-0" target="_top">{{$t('website.investors')}}</a></router-link>
                 </div>
