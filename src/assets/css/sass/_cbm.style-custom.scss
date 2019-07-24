@@ -11,8 +11,8 @@
     padding-top: $navbar-height;
     color: #304772; //#304772; //#77B2E6
     //background: linear-gradient(to bottom,rgba(100, 100, 100, 0), #77B2E6), url($headerImage);
-    background: linear-gradient(to top,rgba(255, 255, 255, 0), white), url($cloudBackground);
-    //background: linear-gradient(to top left, #77B2E6, white);
+    //background: linear-gradient(to top,rgba(255, 255, 255, 0), white), url($cloudBackground);
+    background: linear-gradient(to top left, #77B2E6, white);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
