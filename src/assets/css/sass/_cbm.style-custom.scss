@@ -67,67 +67,67 @@
     }
 }
 
-@keyframes moveInRightRotate {
-    0% {
-        opacity: 0;
-        transform: translateX(300px);
-    }
+// @keyframes moveInRightRotate {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(300px);
+//     }
 
-    50% {
-        transform: translateX(40px) rotate(120deg);
-    }
-    100% {
-        opacity: 1; 
-        transform: translate(0);
-    }
-}
+//     50% {
+//         transform: translateX(40px) rotate(120deg);
+//     }
+//     100% {
+//         opacity: 1; 
+//         transform: translate(0);
+//     }
+// }
 
-@keyframes moveInLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    80% {
-        transform: translateX(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+// @keyframes moveInLeft {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(-100px);
+//     }
+//     80% {
+//         transform: translateX(10px);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translate(0);
+//     }
+// }
 
-@keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    80% {
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
+// @keyframes moveInBottom {
+//     0% {
+//         opacity: 0;
+//         transform: translateY(100px);
+//     }
+//     80% {
+//         transform: translateY(10px);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translate(0);
+//     }
+// }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: .1;
-    }
-    40% {
-        opacity: .3;
-    }
+// @keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     20% {
+//         opacity: .1;
+//     }
+//     40% {
+//         opacity: .3;
+//     }
 
-    60% {
-        opacity: .5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+//     60% {
+//         opacity: .5;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
 
 .header-form {
     width:40vh;
