@@ -68,7 +68,7 @@
                       <icon-card :title="$t('Reliable')" icon="simple-icon-energy" :value="''" />
                   </b-colxx>
                   <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
-                      <icon-card :title="$t('Transparent')" icon="simple-icon-screen-desktop" :value="''" />
+                      <icon-card class="" :title="$t('Transparent')" icon="simple-icon-screen-desktop" :value="''" />
                   </b-colxx>
                 </b-row>
                 <!-- <b-row>
