@@ -233,3 +233,64 @@
     z-index: 100;
     background-color: pink;
 }
+
+.bgimg {
+    background: linear-gradient(to top right rgba(91, 188, 218, 0.90), rgba(255, 255, 255, 0.60));
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: black;
+    font-family: Roboto, "Courier New", Courier, monospace;
+    font-size: 25px;
+  }
+  
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+//   .topleft p {
+//       width: 200px;
+//       height: 67px;
+//       background: url($logoPath);
+//   }
+  
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .middle h1 {
+    width: 470px;
+    height: 175px;
+    background: url($logoPath) center;
+  }
+  
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+
+  .soon-background {
+    background: linear-gradient(to top right, #5BBCDA, white);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    // position: fixed;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    // z-index: -1;
+  }

@@ -102,8 +102,14 @@ const routes = [
       { path: 'contact', component: () => import(/* webpackChunkName: "website" */ './views/website/Contact') },
       { path: 'learnmore', component: () => import(/* webpackChunkName: "website" */ './views/website/LearnMore') },
       { path: 'government', component: () => import(/* webpackChunkName: "website" */ './views/website/Government') },
-      { path: 'investors', component: () => import(/* webpackChunkName: "website" */ './views/website/Investors') },
-      { path: 'soon', component: () => import(/* webpackChunkName: "website" */ './views/website/Soon') }
+      { path: 'investors', component: () => import(/* webpackChunkName: "website" */ './views/website/Investors') }
+    ]
+  },
+  { path: '/website/coming',
+    component: () => import(/* webpackChunkName: "website" */ './views/website/coming'),
+    redirect: 'website/coming/soon',
+    children: [
+      { path: 'soon', component: () => import(/* webpackChunkName: "website" */ './views/website/coming/Soon') }
     ]
   },
   { path: '/website/technology',
