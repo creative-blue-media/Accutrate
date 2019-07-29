@@ -5,10 +5,12 @@
         <b-row class="home-pad" style="z-index: 999;">
           <b-col class="header-text" xs=12 md=6>
             <h5>Better Breathing for Life</h5>
-            <h1 style="font-size: 4em;"><strong>Continuous SPO2 Monitoring Cloud Technology</strong></h1>
-            <h5>Live Longer, Breathe Better</h5>
+            <h1 style="font-size: 4em;"><strong>Wearable pulse-oximetry enabled biosensor</strong></h1>
+            <h5>Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
             <br>
-            <b-button class="mb-1 button-home">{{ 'Learn More' }}</b-button>
+            <router-link tag="a" to="learnmore">
+              <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
+            </router-link>
           </b-col>
           <div class="box col-md-6">
             <b-card sm="6" class="header-form mb-4">
@@ -17,24 +19,24 @@
                     <h2 style="padding:10px;">Get More Information</h2>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
+                        <b-form-input type="text" v-model="prospect.firstname" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
                         <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.lastname')">
-                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-input type="text" v-model="prospect.lastname"/>
                         <b-form-invalid-feedback>{{ $t('forms.lastname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.email')">
-                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-input type="text" v-model="prospect.email"/>
                         <b-form-invalid-feedback>{{ $t('forms.email-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
                   </b-row>
-                  <b-button style="width:100%;" type="submit" variant="primary" class="mt-4">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
+                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button> <!--:disabled="$v.validateForm.$invalid"-->
                 </b-form>
               </b-card>
           </div>
@@ -52,10 +54,24 @@
     <b-container class="publications-section" fluid>
       <b-container class="publications">
         <b-row class="home-pad">
-          <b-row style="padding-bottom: 2vh;">
+          <b-row style="width: 100%;">
             <!-- <b-col md=12> -->
-              <b-container fluid>
-                <b-row style="width: 80vw;">
+              <b-container>
+                <b-row class="icon-cards-row">
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Continuous')" icon="iconsminds-arrow-refresh" :value="''"/>
+                  </b-colxx>
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Conservative')" icon="iconsminds-basket-coins" :value="''" />
+                  </b-colxx>
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card :title="$t('Reliable')" icon="simple-icon-energy" :value="''" />
+                  </b-colxx>
+                  <b-colxx xxs="6" sm="4" md="3" lg="2" style="margin:auto;">
+                      <icon-card class="" :title="$t('Transparent')" icon="simple-icon-screen-desktop" :value="''" />
+                  </b-colxx>
+                </b-row>
+                <!-- <b-row>
                   <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
                     <h1 style="margin: 0; color: #fff; border-bottom: 0px; text-align: center; padding: 15px;"><strong>The Problem</strong></h1>
                   </b-col>
@@ -64,7 +80,7 @@
                     <hr>
                   </b-col>
                 </b-row>
-                <b-row style="width: 80vw;">
+                <b-row>
                   <b-col md=6 style="height: 40vh; background: #fff;">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
@@ -72,7 +88,7 @@
                   <b-col md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
                     <h1 style="color: #fff; border-bottom: 0px; padding: 15px;"><strong>Our Solution</strong></h1>
                   </b-col>
-                </b-row>
+                </b-row> -->
               </b-container>
             <!-- </b-col> -->
           </b-row>
@@ -83,7 +99,6 @@
       <b-container class="shops">
         <b-row class="home-pad">
           <b-col xs=12 md=4>
-            <h1><Strong>Shop</Strong></h1>
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.
@@ -93,7 +108,7 @@
               velit luctus placerat. Quisque mattis neque sit amet
               lectus ornare, vel sagittis nibh tempor.
             </p>
-            <b-button class="mb-1 button-home">{{ 'Buy Now' }}</b-button>
+            <b-button class="mb-1 button-home">{{ 'Explore' }}</b-button>
           </b-col>
           </b-row>
       </b-container>
@@ -106,16 +121,16 @@
                   <b-row>
                     <b-col sm="3">
                       <h2>Subscribe to recieve the latest news</h2>
-                    </b-col>  
+                    </b-col>
                     <b-col sm="3">
                       <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
+                        <b-form-input type="text" v-model="name" /> <!--:state="!$v.validateForm.firstname.$invalid"-->
                         <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
                     <b-col sm="3">
                       <b-form-group :label="$t('forms.email')">
-                        <b-form-input type="text" v-model="prospect.company"/>
+                        <b-form-input type="text" v-model="prospect.email"/>
                         <b-form-invalid-feedback>{{ $t('forms.email-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -132,6 +147,8 @@
 </template>
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import { learnmoreUrl } from '@/constants/config'
+import IconCard from '@/components/Cards/IconCard'
 
 export default {
   props: {
@@ -144,22 +161,51 @@ export default {
       email: '',
       password: '',
       prospect: {
-        name: '',
+        firstname: '',
+        lastname: '',
         company: '',
         email: ''
-      }
+      },
+      learnmoreUrl
     }
   },
+  components: {
+    IconCard
+  },
   computed: {
+    name: {
+      get: function () {
+        if (this.prospect.firstname && this.prospect.lastname) {
+          return this.prospect.firstname + ' ' + this.prospect.lastname
+        } else {
+          return this.prospect.firstname || this.prospect.lastname
+        }
+      },
+      set: function (newFullName) {
+        const names = newFullName.split(' ')
+        if (names.length === 2) {
+          this.prospect.firstname = names[0]
+          this.prospect.lastname = names[1]
+        }
+        if (names.length <= 1) {
+          this.prospect.firstname = names[0] || ''
+          this.prospect.lastname = ''
+        }
+      }
+    },
     ...mapGetters(['currentUser', 'processing', 'loginError'])
   },
   methods: {
-    ...mapActions(['login']),
+    ...mapActions(['login', 'saveProspectInfo']),
     formSubmit () {
       console.log('WHER DOES THIS GO?')
       // this.email = 'demo@gogo.com'
       // this.password = 'gogo123'
       this.login({ email: this.email, password: this.password })
+    },
+    getProspectInfo () {
+      console.log('GETTING INFO:')
+      this.saveProspectInfo({ firstname: this.prospect.firstname, lastname: this.prospect.lastname, email: this.prospect.email })
     }
   },
   watch: {

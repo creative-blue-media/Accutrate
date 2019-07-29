@@ -2,70 +2,13 @@
   <div class="root-home">
     <b-container class="home-header" fluid>
       <b-container class="h-header">
-        <b-row class="home-pad" style="z-index: 999;">
+        <b-row class="home-pad" style="z-index: 999; text-align: center;">
           <b-col class="header-text" xs=12 md=12>
-            <h5>Better Breathing for Life</h5>
-            <h1 style="font-size: 4em;"><strong>Web interface and cloud services</strong></h1>
-            <h5>Online monitoring via web browser on any device. Alarm management system. Cloud services with artificial intelligence analytics and state-of-the-art algorithms to measure vital signs</h5>
+            <h1 style="font-size: 4em;"><strong>Corporate Documents</strong></h1>
             <br>
-            <router-link tag="a" to="learnmore">
-              <b-button class="mb-1 button-home" v-b-modal.modalbasic>{{ 'Get More Info' }}</b-button>
-            </router-link>
           </b-col>
-          <b-col xs="12">
-              <b-modal id="modalbasic" ref="modalbasic" :title="$t('modal.modal-title')" :hide-backdrop="true" :body-bg-variant="'primary'">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.
-                  <template slot="modal-footer">
-                      <b-button variant="primary" @click="somethingModal('modalbasic')" class="mr-1">Do Something</b-button>
-                      <b-button variant="secondary" @click="hideModal('modalbasic')">Cancel</b-button>
-                  </template>
-              </b-modal>
-        </b-col>
-          <!-- <div class="box col-md-6">
-            <b-card sm="6" class="header-form mb-4">
-                <b-form class="mb-12">
-                  <b-row>
-                    <h2 style="padding:10px;">Get More Information</h2>
-                    <b-col sm="12">
-                      <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.firstname" /> 
-                        <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group :label="$t('forms.lastname')">
-                        <b-form-input type="text" v-model="prospect.lastname"/>
-                        <b-form-invalid-feedback>{{ $t('forms.lastname-message')}}</b-form-invalid-feedback>
-                      </b-form-group>
-                    </b-col>
-                    <b-col sm="12">
-                      <b-form-group :label="$t('forms.email')">
-                        <b-form-input type="text" v-model="prospect.email"/>
-                        <b-form-invalid-feedback>{{ $t('forms.email-message')}}</b-form-invalid-feedback>
-                      </b-form-group>
-                    </b-col>
-                  </b-row>
-                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button>
-                </b-form>
-              </b-card>
-          </div> -->
         </b-row>
       </b-container>
-      <div class="container-fluid curveSVG">
-        <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          viewBox="0 0 2000 1117" style="enable-background:new 0 0 2000 1117;" xml:space="preserve">
-        <title>SVGArtboard 3</title>
-        <path style="fill:#F5F9FD;" d="M0,1116.78c0,0,1360.42-586.57,2000-576.56l-0.42,576.78L0,1116.78z"/>
-        </svg>
-      </div>
     </b-container>
     <b-container class="publications-section" fluid>
       <b-container class="publications">
@@ -205,22 +148,6 @@ export default {
     getProspectInfo () {
       console.log('GETTING INFO:')
       this.saveProspectInfo({ firstname: this.prospect.firstname, lastname: this.prospect.lastname, email: this.prospect.email })
-    },
-    hideModal (refname) {
-      this.$refs[refname].hide()
-      console.log('hide modal:: ' + refname)
-
-      if (refname === 'modalnestedinline') {
-        this.$refs['modalnested'].show()
-      }
-    },
-    somethingModal (refname) {
-      this.$refs[refname].hide()
-      console.log('something modal:: ' + refname)
-
-      if (refname === 'modalnestedinline') {
-        this.$refs['modalnested'].show()
-      }
     }
   },
   watch: {

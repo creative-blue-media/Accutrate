@@ -2,16 +2,48 @@
 <div>
   <b-row>
     <b-colxx xxs="12">
-      <cbm-breadcrumb :heading="$t('Settings')"/>
+      <cbm-breadcrumb :heading="$t('menu.forms')"/>
       <div class="separator mb-5"></div>
     </b-colxx>
   </b-row>
   <b-row>
     <b-colxx xxs="12">
-        <b-card class="mb-4" :title="$t('Settings')">
+        <b-card class="mb-4" :title="$t('Employee Profile')">
           <b-form @submit.prevent="onGridFormSubmit">
             <b-row>
+
+              <b-colxx sm="6">
+                <b-form-group :label="$t('forms.email')">
+                  <b-form-input type="email" v-model="currentUser.email" />
+                </b-form-group>
+              </b-colxx>
+              <b-colxx sm="6">
+                <b-form-group :label="$t('forms.password')">
+                  <b-form-input type="password" v-model="currentUser.password"/>
+                </b-form-group>
+              </b-colxx>
+              <b-colxx sm="12">
+                <b-form-group :label="$t('forms.address')">
+                  <b-form-input v-model="currentUser.address.street" placeholder="Address"></b-form-input>
+                </b-form-group>
+              </b-colxx>
+              <b-colxx sm="6">
+                <b-form-group :label="$t('forms.city')">
+                  <b-form-input v-model="currentUser.address.city" placeholder="City"></b-form-input>
+                </b-form-group>
+              </b-colxx>
+              <b-colxx sm="4">
+                <b-form-group :label="$t('forms.state')">
+                  <b-form-select v-model="currentUser.address.state" :options="stateOptions" plain  />
+                </b-form-group>
+              </b-colxx>
+              <b-colxx sm="2">
+                <b-form-group :label="$t('forms.zip')">
+                  <b-form-input v-model="currentUser.address.zip" placeholder="Zip"></b-form-input>
+                </b-form-group>
+              </b-colxx>
             </b-row>
+
             <b-button type="submit" variant="primary" class="mt-4">{{ $t('forms.update') }}</b-button>
           </b-form>
         </b-card>

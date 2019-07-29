@@ -83,7 +83,11 @@
     "visible": "Visible",
     "tables": "Tables",
     "maps": "Maps",
-    "news": "News"
+    "news": "News",
+    "employee": "Employee",
+    "settings": "Settings",
+    "profile": "Profile",
+    "prospects": "Prospects"
   },
 
   "dashboards": {
@@ -549,7 +553,13 @@
     "learnmore": "LEARN MORE",
     "problem": "THE PROBLEM",
     "solution": "OUR SOLUTION",
-    "government": "GOVERNMENT",
-    "investors": "INVESTORS"
+    "government": "GOVERNENCE",
+    "investors": "INVESTORS",
+    "tech": ["ACCUSENSOR", "ACCUTITRATOR", "INTELLECTUAL PROPERTY"],
+    "governence": ["MANAGEMENT", "BOARD OF DIRECTORS", "COMMITTEES & CHARTERS", "CORPORATE GOVERNANCE DOCUMENTS"],
+    "information": ["RESEARCH", "RESOURCES"]
+  },
+  "crm": {
+    "prospects": "PROSPECTS"
   }
 }

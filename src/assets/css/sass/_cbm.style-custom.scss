@@ -11,12 +11,13 @@
     padding-top: $navbar-height;
     color: #304772; //#304772; //#77B2E6
     //background: linear-gradient(to bottom,rgba(100, 100, 100, 0), #77B2E6), url($headerImage);
-    background: linear-gradient(to top,rgba(255, 255, 255, 0), white), url($cloudBackground);
-    //background: linear-gradient(to top left, #77B2E6, white);
+    //background: linear-gradient(to top,rgba(255, 255, 255, 0), white), url($cloudBackground);
+    background: linear-gradient(to top left, #77B2E6, white);
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: white; 
+    // border-radius: 20px 20px 0px 0px;
     //background: url($curveSVG) ;
     //clip-path: polygon(0 0, 100% 0, 100% 20vh, 0 100%);
     
@@ -25,12 +26,10 @@
     @include respond-below(xl) {
         padding-top: $navbar-height-lg;
     }
-
     @include respond-below(lg) {
         padding-top: $navbar-height-md;
         // padding: 1.5rem $main-margin-md 1.5rem 0;
     }
-
     @include respond-below(sm) {
         padding-top: $navbar-height-xs;
         // padding: $main-margin-xs;
@@ -42,16 +41,94 @@
     }
     // this isn't working ...
 }
+
+.root-home {
+    background: #f8f8f8;
+}
 #ddown1__BV_toggle_ {
     background-color: rgba(255, 255, 255, 0);
 }
 .h-header {
     position: relative;
 }
+
 .header-text {
     margin:0;
     vertical-align: middle;
+    h1 {
+        animation: moveInLeft 1s ease-out;
+    }
+
+    #company-header {
+        animation: moveInRightRotate 1s ease-out;
+    }
+    .company-text-body {
+        animation: moveInBottom 1s ease-out;
+    }
 }
+
+// @keyframes moveInRightRotate {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(300px);
+//     }
+
+//     50% {
+//         transform: translateX(40px) rotate(120deg);
+//     }
+//     100% {
+//         opacity: 1; 
+//         transform: translate(0);
+//     }
+// }
+
+// @keyframes moveInLeft {
+//     0% {
+//         opacity: 0;
+//         transform: translateX(-100px);
+//     }
+//     80% {
+//         transform: translateX(10px);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translate(0);
+//     }
+// }
+
+// @keyframes moveInBottom {
+//     0% {
+//         opacity: 0;
+//         transform: translateY(100px);
+//     }
+//     80% {
+//         transform: translateY(10px);
+//     }
+//     100% {
+//         opacity: 1;
+//         transform: translate(0);
+//     }
+// }
+
+// @keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     20% {
+//         opacity: .1;
+//     }
+//     40% {
+//         opacity: .3;
+//     }
+
+//     60% {
+//         opacity: .5;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
 .header-form {
     width:40vh;
     float:right;
@@ -81,12 +158,37 @@
 
 .publications-section {
     color: $theme-color-1;
-    background: #F5F9FD;
+    background:linear-gradient(to bottom left, #77B2E6,  #fff); // background: #F5F9FD;
     h1 {
         border-bottom: 2px $theme-color-1 solid;
         padding-bottom: 2px;
     }
 }
+
+.icon-cards-row > * > * {
+    background: #fff;
+    border-radius: 8px;   
+}
+
+// .icon-cards-row .icon {  
+//     background: #ff0000;
+//     animation: shake 10s;
+//     animation-iteration-count: infinite;
+// }
+  
+// @keyframes shake {
+//     0% { transform: translate(1px, 1px) rotate(0deg); }
+//     10% { transform: translate(-1px, -2px) rotate(-1deg); }
+//     20% { transform: translate(-3px, 0px) rotate(1deg); }
+//     30% { transform: translate(3px, 2px) rotate(0deg); }
+//     40% { transform: translate(1px, -1px) rotate(1deg); }
+//     50% { transform: translate(-1px, 2px) rotate(-1deg); }
+//     60% { transform: translate(-3px, 1px) rotate(0deg); }
+//     70% { transform: translate(3px, 1px) rotate(-1deg); }
+//     80% { transform: translate(-1px, -1px) rotate(1deg); }
+//     90% { transform: translate(1px, 2px) rotate(0deg); }
+//     100% { transform: translate(1px, -2px) rotate(-1deg); }
+// }
 
 .shops-section {
     color: #fff;
@@ -117,7 +219,7 @@
 
 .home-pad {
     position: relative;
-    padding: 10vh;
+    padding: 8vh;
 }
 
 .button-home {

@@ -25,14 +25,15 @@
 
         <div class="sub-menu">
              <vue-perfect-scrollbar class="scroll " :settings="{ suppressScrollX: true, wheelPropagation: false }" >
-                <ul class="list-unstyled" data-link="dashboards" v-bind:class="[(selectedParentMenu==='dashboards' || selectedParentMenu==='settings') ? 'd-block' :'']">
+                <ul class="list-unstyled" data-link="dashboards" v-bind:class="[(selectedParentMenu==='dashboards' || selectedParentMenu==='settings' || selectedParentMenu==='pages') ? 'd-block' :'']">
                     <router-link tag="li" to="#"><span  class="name mr-1"> Hi, {{currentUser.firstname}} {{currentUser.lastname}}!</span></router-link>
-                    <router-link tag="li" to="/app/dashboards/patient"><a><i class="simple-icon-briefcase"></i> {{ 'Profile' }}</a></router-link>
+                    <router-link tag="li" to="/app/pages/profile"><a><i class="simple-icon-briefcase"></i> {{ 'Profile' }}</a></router-link>
                     <router-link tag="li" to="/app/settings"><a><i class="simple-icon-pie-chart"></i> {{ 'Settings' }}</a></router-link>
+                    <router-link tag="li" to="/app/pages/prospects"><a><i class="simple-icon-pie-chart"></i> {{ 'Prospects' }}</a></router-link>
                     <router-link tag="li" to="/app/pages/news"><a><i class="simple-icon-pie-chart"></i> {{ 'News' }}</a></router-link>
                 </ul>
 
-                <ul class="list-unstyled" data-link="pages" :class="{'d-block':selectedParentMenu==='pages' }">
+                <!-- <ul class="list-unstyled" data-link="pages" :class="{'d-block':selectedParentMenu==='pages' }">
                     <router-link tag="li" to="/app/pages/data-list"><a><i class="simple-icon-credit-card"></i> {{ $t("menu.data-list") }}</a></router-link>
                     <router-link tag="li" to="/app/pages/thumb-list"><a><i class="simple-icon-list"></i> {{ $t("menu.thumb-list") }}</a></router-link>
                     <router-link tag="li" to="/app/pages/image-list"><a><i class="simple-icon-grid"></i> {{ $t("menu.image-list") }}</a></router-link>
@@ -44,7 +45,7 @@
                     <router-link tag="li" to="/user/register"><a target="_blank"><i class="simple-icon-user-follow"></i> {{ $t("menu.register") }}</a></router-link>
                     <router-link tag="li" to="/user/forgot-password"><a target="_blank"><i class="simple-icon-user-unfollow"></i> {{ $t("menu.forgot-password") }}</a></router-link>
                     <router-link tag="li" to="/error"><a target="_blank"><i class="simple-icon-exclamation"></i> {{ $t("menu.error") }}</a></router-link>
-                </ul>
+                </ul> -->
 
                 <ul class="list-unstyled" data-link="applications" :class="{'d-block':selectedParentMenu==='applications' }">
                     <router-link tag="li" to="/app/applications/todo"><a><i class="simple-icon-check"></i> {{ $t("menu.todo") }}</a></router-link>

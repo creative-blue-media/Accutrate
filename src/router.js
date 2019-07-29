@@ -14,14 +14,14 @@ const routes = [
       {
         path: 'app/dashboards',
         component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards'),
-        redirect: '/app/dashboards/patient',
+        redirect: '/app/dashboards/employee',
         children: [
           { path: 'default', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Default') },
           { path: 'analytics', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Analytics') },
           { path: 'ecommerce', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Ecommerce') },
           { path: 'content', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Content') },
           { path: 'doctor', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Doctor') },
-          { path: 'patient', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Patient') }
+          { path: 'employee', component: () => import(/* webpackChunkName: "dashboards" */ './views/app/dashboards/Employee') }
         ]
       },
       {
@@ -36,7 +36,10 @@ const routes = [
           { path: 'search', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Search') },
           { path: 'mailing', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Mailing') },
           { path: 'invoice', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Invoice') },
-          { path: 'news', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/News') }
+          { path: 'profile', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Profile') },
+          { path: 'news', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/News') },
+          { path: 'prospects', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospects') },
+          { path: 'prospect/:id', component: () => import(/* webpackChunkName: "pages" */ './views/app/pages/Prospect') }
         ]
       },
       {
@@ -95,9 +98,32 @@ const routes = [
       { path: 'home', component: () => import(/* webpackChunkName: "website" */ './views/website/Home') },
       { path: 'publications', component: () => import(/* webpackChunkName: "website" */ './views/website/Publications') },
       { path: 'resources', component: () => import(/* webpackChunkName: "website" */ './views/website/Resources') },
-      { path: 'shop', component: () => import(/* webpackChunkName: "website" */ './views/website/Shop') },
+      { path: 'company', component: () => import(/* webpackChunkName: "website" */ './views/website/Company') },
       { path: 'contact', component: () => import(/* webpackChunkName: "website" */ './views/website/Contact') },
-      { path: 'learnmore', component: () => import(/* webpackChunkName: "website" */ './views/website/LearnMore') }
+      { path: 'learnmore', component: () => import(/* webpackChunkName: "website" */ './views/website/LearnMore') },
+      { path: 'government', component: () => import(/* webpackChunkName: "website" */ './views/website/Government') },
+      { path: 'investors', component: () => import(/* webpackChunkName: "website" */ './views/website/Investors') },
+      { path: 'soon', component: () => import(/* webpackChunkName: "website" */ './views/website/Soon') }
+    ]
+  },
+  { path: '/website/technology',
+    component: () => import(/* webpackChunkName: "website" */ './views/website/technology'),
+    redirect: 'website/technology/patient',
+    children: [
+      { path: 'patient', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Patient') },
+      { path: 'clinician', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Clinician') },
+      { path: 'accusensor', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Accusensor') },
+      { path: 'accutitrator', component: () => import(/* webpackChunkName: "website" */ './views/website/technology/Accutitrator') }
+    ]
+  },
+  { path: '/website/governence',
+    component: () => import(/* webpackChunkName: "website" */ './views/website/governence'),
+    redirect: 'website/governence/management',
+    children: [
+      { path: 'management', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Management') },
+      { path: 'board', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Board') },
+      { path: 'committees', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Committees') },
+      { path: 'documents', component: () => import(/* webpackChunkName: "website" */ './views/website/governence/Documents') }
     ]
   },
   {

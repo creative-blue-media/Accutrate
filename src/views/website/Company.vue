@@ -3,39 +3,26 @@
     <b-container class="home-header" fluid>
       <b-container class="h-header">
         <b-row class="home-pad" style="z-index: 999;">
-          <b-col class="header-text" xs=12 md=12>
-            <h5>Better Breathing for Life</h5>
-            <h1 style="font-size: 4em;"><strong>Web interface and cloud services</strong></h1>
-            <h5>Online monitoring via web browser on any device. Alarm management system. Cloud services with artificial intelligence analytics and state-of-the-art algorithms to measure vital signs</h5>
+          <b-col class="header-text" xs=12 md=12 style="text-align: center;">
+            <h1 id="company-header" style="font-size: 4em;"><strong>Who We Are</strong></h1>
+            <h5 class="company-text-body">Low-cost, low-power, miniature, wearable sensor for continuoues remote monitoring of vital signs</h5>
             <br>
-            <router-link tag="a" to="learnmore">
-              <b-button class="mb-1 button-home" v-b-modal.modalbasic>{{ 'Get More Info' }}</b-button>
-            </router-link>
+            <!-- <router-link tag="a" to="learnmore">
+              <b-button class="mb-1 button-home" >{{'Learn More'}}</b-button>
+            </router-link> -->
           </b-col>
-          <b-col xs="12">
-              <b-modal id="modalbasic" ref="modalbasic" :title="$t('modal.modal-title')" :hide-backdrop="true" :body-bg-variant="'primary'">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna
-                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                  ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                  Duis aute irure dolor in reprehenderit in voluptate velit
-                  esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.
-                  <template slot="modal-footer">
-                      <b-button variant="primary" @click="somethingModal('modalbasic')" class="mr-1">Do Something</b-button>
-                      <b-button variant="secondary" @click="hideModal('modalbasic')">Cancel</b-button>
-                  </template>
-              </b-modal>
-        </b-col>
-          <!-- <div class="box col-md-6">
-            <b-card sm="6" class="header-form mb-4">
+          <div class="box col-md-12 header-text">
+            <h5 class="company-text-body">At Accutrate, we pioneer innovative solutions that utilize analytics to optimize health resource usage, 
+              empowering individuals to live healthier, higher-quality lives. Our cloud-connected health devices transform care for people with pulminary fibrosis, people who use POC.... Our comprehensive out-of-hospital software platforms support the professionals and caregivers who help people stay healthy in the home or care setting of their choice. 
+              By enabling better data and transparency, we improve quality of life, reduce the impact of chronic disease and lower costs for consumers and healthcare systems .... 
+              To learn more, ...</h5>
+            <!-- <b-card sm="6" class="header-form mb-4">
                 <b-form class="mb-12">
                   <b-row>
                     <h2 style="padding:10px;">Get More Information</h2>
                     <b-col sm="12">
                       <b-form-group :label="$t('forms.firstname')"  >
-                        <b-form-input type="text" v-model="prospect.firstname" /> 
+                        <b-form-input type="text" v-model="prospect.firstname" />
                         <b-form-invalid-feedback>{{ $t('forms.firstname-message')}}</b-form-invalid-feedback>
                       </b-form-group>
                     </b-col>
@@ -52,20 +39,21 @@
                       </b-form-group>
                     </b-col>
                   </b-row>
-                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button>
+                  <b-button style="width:100%;" type="button" variant="primary" class="mt-4" @click="getProspectInfo()">{{ $t('forms.submit') }}</b-button> 
                 </b-form>
-              </b-card>
-          </div> -->
+              </b-card> -->
+          </div>
         </b-row>
       </b-container>
-      <div class="container-fluid curveSVG">
-        <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+      <div class="col-md-12 who-we-are" style="background: url('/assets/img/elderly.jpg'); height: 100vh;">
+      </div>
+      <!-- <div class="container-fluid curveSVG">
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 2000 1117" style="enable-background:new 0 0 2000 1117;" xml:space="preserve">
         <title>SVGArtboard 3</title>
         <path style="fill:#F5F9FD;" d="M0,1116.78c0,0,1360.42-586.57,2000-576.56l-0.42,576.78L0,1116.78z"/>
         </svg>
-      </div>
+      </div> -->
     </b-container>
     <b-container class="publications-section" fluid>
       <b-container class="publications">
@@ -74,20 +62,40 @@
             <!-- <b-col md=12> -->
               <b-container>
                 <b-row>
-                  <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
+                  <b-col xs=12 md=6 style="height: 40vh; background: linear-gradient(to bottom right, rgba(119, 178, 230, .3), #304772);">
                     <h1 style="margin: 0; color: #fff; border-bottom: 0px; text-align: center; padding: 15px;"><strong>The Problem</strong></h1>
                   </b-col>
-                  <b-col xs=12 md=6 style="height: 40vh; background: #fff;">
+                  <b-col xs=12 md=6 style="height: 40vh; background: rgba(255, 255, 255, .5);">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
+                    <p style="color: #555;">There are many variations of passages of Lorem Ipsum available, 
+                      but the majority have suffered alteration in some form, by injected humour, 
+                      or randomised words which don't look even slightly believable. 
+                      If you are going to use a passage of Lorem Ipsum, 
+                      you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                      All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+                      making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, 
+                      combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+                      The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                      </p>
                   </b-col>
                 </b-row>
                 <b-row>
-                  <b-col md=6 style="height: 40vh; background: #fff;">
+                  <b-col md=6 style="height: 40vh; background: rgba(255, 255, 255, .5);">
                     <h1 style="color: #555; border-bottom: 0px; padding-top: 8px;">I QUO REPRIMIQUE </h1>
                     <hr>
+                    <p style="color: #555;">There are many variations of passages of Lorem Ipsum available, 
+                      but the majority have suffered alteration in some form, by injected humour, 
+                      or randomised words which don't look even slightly believable. 
+                      If you are going to use a passage of Lorem Ipsum, 
+                      you need to be sure there isn't anything embarrassing hidden in the middle of text. 
+                      All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
+                      making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, 
+                      combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. 
+                      The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                      </p>
                   </b-col>
-                  <b-col md=6 style="height: 40vh; background: linear-gradient(to bottom right, #77B2E6, #304772);">
+                  <b-col md=6 style="height: 40vh; background: linear-gradient(to bottom right, rgba(119, 178, 230, .3), #304772);">
                     <h1 style="color: #fff; border-bottom: 0px; padding: 15px;"><strong>Our Solution</strong></h1>
                   </b-col>
                 </b-row>
@@ -205,22 +213,6 @@ export default {
     getProspectInfo () {
       console.log('GETTING INFO:')
       this.saveProspectInfo({ firstname: this.prospect.firstname, lastname: this.prospect.lastname, email: this.prospect.email })
-    },
-    hideModal (refname) {
-      this.$refs[refname].hide()
-      console.log('hide modal:: ' + refname)
-
-      if (refname === 'modalnestedinline') {
-        this.$refs['modalnested'].show()
-      }
-    },
-    somethingModal (refname) {
-      this.$refs[refname].hide()
-      console.log('something modal:: ' + refname)
-
-      if (refname === 'modalnestedinline') {
-        this.$refs['modalnested'].show()
-      }
     }
   },
   watch: {

@@ -6,6 +6,7 @@ module.exports = function (app, express) {
 
     // variables to Api for backend routes
     const user = require("./models/user/UserController")(app, express);
+    const prospect = require("./models/prospect/ProspectController")(app, express);
     const blog = require("./models/blog/BlogController")(app, express);
     const comment = require("./models/comment/CommentController")(app, express);
     const notification = require("./models/notification/NotificationController")(app, express);
@@ -26,6 +27,7 @@ module.exports = function (app, express) {
     });
 
     router.use('/users', user);
+    router.use('/prospects', prospect);
     router.use('/blogs', blog);
     router.use('/comments', comment);
     router.use('/notifications', notification);
